@@ -19,9 +19,9 @@ export const ZyphStage: React.FC<ZyphStageProps> = ({
   align = "right",
   zoomScale = 1.0,
   zoomDirection = "subtle-in",
-  shadowWidth = 460,
-  shadowOpacity = 0.32,
-  heightPercent = 90,
+  shadowWidth = 520,
+  shadowOpacity = 0.35,
+  heightPercent = 94,
   entranceFrame = 0,
   horizontalOffset = 0,
 }) => {
@@ -34,31 +34,30 @@ export const ZyphStage: React.FC<ZyphStageProps> = ({
   const entrance = spring({
     frame: relFrame,
     fps,
-    config: { damping: 14, mass: 0.8, stiffness: 80 },
+    config: { damping: 15, mass: 0.8, stiffness: 75 },
   });
 
   // Slow continuous camera drift
   let cameraScale = 1.0;
   if (zoomDirection === "subtle-in") {
-    cameraScale = interpolate(relFrame, [0, 400], [1.0, 1.06], {
+    cameraScale = interpolate(relFrame, [0, 500], [1.0, 1.05], {
       extrapolateRight: "clamp",
     });
   } else if (zoomDirection === "in") {
-    cameraScale = interpolate(relFrame, [0, 240], [1.0, 1.12], {
+    cameraScale = interpolate(relFrame, [0, 300], [1.0, 1.10], {
       extrapolateRight: "clamp",
     });
   } else if (zoomDirection === "out") {
-    cameraScale = interpolate(relFrame, [0, 240], [1.08, 1.0], {
+    cameraScale = interpolate(relFrame, [0, 300], [1.08, 1.0], {
       extrapolateRight: "clamp",
     });
   }
 
-  const finalScale = zoomScale * cameraScale * (0.95 + 0.05 * entrance);
-  const opacity = interpolate(relFrame, [0, 12], [0, 1], {
+  const finalScale = zoomScale * cameraScale * (0.96 + 0.04 * entrance);
+  const opacity = interpolate(relFrame, [0, 10], [0, 1], {
     extrapolateRight: "clamp",
   });
 
-  // Justify content based on align
   const justify =
     align === "left"
       ? "flex-start"
@@ -68,23 +67,22 @@ export const ZyphStage: React.FC<ZyphStageProps> = ({
 
   const paddingSide =
     align === "left"
-      ? { paddingLeft: "60px" }
+      ? { paddingLeft: "80px" }
       : align === "right"
-      ? { paddingRight: "60px" }
+      ? { paddingRight: "80px" }
       : {};
 
   return (
     <div
       style={{
-        position: "relative",
-        width: "100%",
-        height: "100%",
+        position: "absolute",
+        inset: 0,
         display: "flex",
         alignItems: "flex-end",
         justifyContent: justify,
-        backgroundColor: COLORS.bg,
         overflow: "hidden",
         opacity,
+        pointerEvents: "none",
         ...paddingSide,
       }}
     >
@@ -92,7 +90,7 @@ export const ZyphStage: React.FC<ZyphStageProps> = ({
         style={{
           position: "relative",
           height: `${heightPercent}%`,
-          maxWidth: "52%",
+          maxWidth: "58%",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -105,13 +103,13 @@ export const ZyphStage: React.FC<ZyphStageProps> = ({
         <div
           style={{
             position: "absolute",
-            bottom: "1%",
+            bottom: "0%",
             width: `${shadowWidth}px`,
-            height: "42px",
+            height: "44px",
             borderRadius: "50%",
-            background: `radial-gradient(ellipse at center, rgba(0,0,0,${shadowOpacity}) 0%, rgba(0,0,0,${shadowOpacity * 0.35}) 48%, rgba(0,0,0,0) 72%)`,
-            filter: "blur(7px)",
-            transform: `scale(${cameraScale}, 0.6)`,
+            background: `radial-gradient(ellipse at center, rgba(0,0,0,${shadowOpacity}) 0%, rgba(0,0,0,${shadowOpacity * 0.4}) 45%, rgba(0,0,0,0) 72%)`,
+            filter: "blur(8px)",
+            transform: `scale(${cameraScale}, 0.55)`,
             pointerEvents: "none",
             zIndex: 1,
           }}
@@ -123,12 +121,12 @@ export const ZyphStage: React.FC<ZyphStageProps> = ({
           alt="Zyph Mannequin"
           style={{
             position: "relative",
-            maxHeight: "98%",
+            maxHeight: "100%",
             maxWidth: "100%",
             objectFit: "contain",
             mixBlendMode: "multiply",
             zIndex: 2,
-            filter: "contrast(1.05) brightness(0.99)",
+            filter: "contrast(1.04) brightness(0.99)",
           }}
         />
       </div>
