@@ -1,58 +1,13 @@
 import React from "react";
-import {
-  Audio,
-  interpolate,
-  Sequence,
-  spring,
-  staticFile,
-  useCurrentFrame,
-  useVideoConfig,
-} from "remotion";
-import { Captions } from "../components/Captions";
-import { FloatingCard } from "../components/FloatingCard";
-import { ProgressBar } from "../components/ProgressBar";
-import { SoundEffects } from "../components/SoundEffects";
+import { Audio, interpolate, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
+import { GlitchSlice } from "../components/GlitchSlice";
 import { ZyphStage } from "../components/ZyphStage";
 import { COLORS, FONTS } from "../constants";
-import { TRANSCRIPT_SEGMENTS } from "../data/scriptData";
-import { SoundCue, WordTimestamp } from "../types";
 
 export const PokerFaceShort: React.FC = () => {
   const frame = useCurrentFrame();
-  const { fps, durationInFrames } = useVideoConfig();
-
-  // Words for 0 to 36.5s
-  const words: WordTimestamp[] = React.useMemo(() => {
-    const list: WordTimestamp[] = [];
-    for (const seg of TRANSCRIPT_SEGMENTS) {
-      if (seg.end <= 37) {
-        list.push(...seg.words);
-      }
-    }
-    return list;
-  }, []);
-
-  // Hook Slam Animation (frames 0 - 60)
-  const hookSpring = spring({
-    frame,
-    fps,
-    config: { damping: 11, mass: 0.5, stiffness: 140 },
-  });
-  const hookScale = interpolate(hookSpring, [0, 1], [1.5, 1.0]);
-  const hookOpacity = interpolate(frame, [0, 8, 55, 68], [0, 1, 1, 0], {
-    extrapolateRight: "clamp",
-  });
-
-  // Sound cues synced to key visual moments
-  const soundCues: SoundCue[] = [
-    { src: "sfx/thump.wav", frame: 1, volume: 0.8 }, // Opening Slam
-    { src: "sfx/pop.wav", frame: 220, volume: 0.5 }, // Perception Gap card
-    { src: "sfx/whoosh.wav", frame: 335, volume: 0.4 }, // Pose transition
-    { src: "sfx/pop.wav", frame: 450, volume: 0.5 }, // Neutrality trap
-    { src: "sfx/whoosh.wav", frame: 650, volume: 0.4 }, // Camera sweep
-    { src: "sfx/pop.wav", frame: 855, volume: 0.6 }, // 3-Second Pause
-    { src: "sfx/click.wav", frame: 980, volume: 0.5 }, // Emotional neutrality
-  ];
+  const { fps } = useVideoConfig(); // 60 FPS
+  const currentSec = frame / fps;
 
   return (
     <div
@@ -64,46 +19,10 @@ export const PokerFaceShort: React.FC = () => {
         overflow: "hidden",
       }}
     >
-      {/* 1. Primary Voiceover Audio */}
+      {/* 1. Voiceover Audio */}
       <Audio src={staticFile("audio/voiceover.mp3")} startFrom={0} />
 
-      {/* 2. Synced Procedural Sound Effects */}
-      <SoundEffects cues={soundCues} />
-
-      {/* 3. Zyph Dynamic Stages (Transitions across the narrative) */}
-      {/* Scene 1: 0 - 11s (frames 0 - 330) */}
-      <Sequence from={0} durationInFrames={335}>
-        <ZyphStage
-          imageSrc={staticFile("zyph/zyph_1.png")}
-          zoomDirection="subtle-in"
-          shadowWidth={420}
-          heightPercent={82}
-        />
-      </Sequence>
-
-      {/* Scene 2: 11.2s - 21.6s (frames 335 - 650) */}
-      <Sequence from={335} durationInFrames={315}>
-        <ZyphStage
-          imageSrc={staticFile("zyph/zyph_7.png")}
-          zoomDirection="subtle-in"
-          shadowWidth={440}
-          heightPercent={82}
-          entranceFrame={335}
-        />
-      </Sequence>
-
-      {/* Scene 3: 21.6s - 37s (frames 650 - 1110) */}
-      <Sequence from={650} durationInFrames={460}>
-        <ZyphStage
-          imageSrc={staticFile("zyph/zyph_10.png")}
-          zoomDirection="in"
-          shadowWidth={460}
-          heightPercent={85}
-          entranceFrame={650}
-        />
-      </Sequence>
-
-      {/* 4. Top Editorial Brand Badge */}
+      {/* 2. Top Editorial Header */}
       <div
         style={{
           position: "absolute",
@@ -120,23 +39,23 @@ export const PokerFaceShort: React.FC = () => {
         <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
           <div
             style={{
-              width: "12px",
-              height: "12px",
-              backgroundColor: COLORS.accentRed,
-              borderRadius: "50%",
+              width: "18px",
+              height: "4px",
+              backgroundColor: COLORS.accentGreen,
+              borderRadius: "2px",
             }}
           />
           <span
             style={{
               fontFamily: FONTS.mono,
-              fontSize: "16px",
+              fontSize: "15px",
               fontWeight: 800,
-              letterSpacing: "0.2em",
+              letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: COLORS.fg,
+              color: COLORS.muted,
             }}
           >
-            ZYPH / LABS
+            01 · THE MISTAKE
           </span>
         </div>
 
@@ -144,117 +63,250 @@ export const PokerFaceShort: React.FC = () => {
           style={{
             fontFamily: FONTS.mono,
             fontSize: "14px",
-            fontWeight: 600,
-            color: COLORS.muted,
+            fontWeight: 700,
+            color: COLORS.subtle,
           }}
         >
-          PSYCHOLOGY & STRATEGY
+          ZYPH LABS
         </span>
       </div>
 
-      {/* 5. Hook Title Slam (First 2.2 seconds) */}
-      {frame < 70 && (
-        <div
-          style={{
-            position: "absolute",
-            top: "24%",
-            left: "60px",
-            right: "60px",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            zIndex: 45,
-            opacity: hookOpacity,
-            transform: `scale(${hookScale})`,
-            pointerEvents: "none",
-          }}
-        >
+      {/* 3. Dynamic Vertical Scenes */}
+
+      {/* Scene 1: 0 - 6s ("I spent years building the perfect poker face.") */}
+      {currentSec < 6 && (
+        <>
           <div
             style={{
-              backgroundColor: COLORS.darkPill,
-              color: COLORS.darkPillText,
-              fontFamily: FONTS.mono,
-              fontSize: "16px",
-              fontWeight: 700,
-              letterSpacing: "0.25em",
-              padding: "8px 20px",
-              borderRadius: "6px",
-              marginBottom: "16px",
+              position: "absolute",
+              top: "220px",
+              left: "64px",
+              right: "64px",
+              zIndex: 30,
             }}
           >
-            THE STRATEGY FLAW
+            <h1
+              style={{
+                fontFamily: FONTS.editorialSerif,
+                fontSize: "76px",
+                fontWeight: 800,
+                lineHeight: 1.1,
+                color: COLORS.fg,
+                letterSpacing: "-0.03em",
+                margin: 0,
+              }}
+            >
+              I spent years building the{" "}
+              <span style={{ fontStyle: "italic", color: COLORS.accentGreen }}>
+                perfect
+              </span>{" "}
+              poker face.
+            </h1>
           </div>
-          <h1
+
+          <div
             style={{
-              fontFamily: FONTS.sans,
-              fontSize: "76px",
-              fontWeight: 950,
-              letterSpacing: "-0.04em",
-              lineHeight: 0.95,
-              textAlign: "center",
-              color: COLORS.fg,
-              textTransform: "uppercase",
-              margin: 0,
+              position: "absolute",
+              bottom: "0px",
+              left: 0,
+              right: 0,
+              height: "1280px",
             }}
           >
-            I WAS WRONG ABOUT POKER FACE
-          </h1>
-        </div>
+            <ZyphStage
+              imageSrc={staticFile("zyph/zyph_11.png")}
+              align="center"
+              zoomDirection="subtle-in"
+              heightPercent={96}
+            />
+          </div>
+        </>
       )}
 
-      {/* 6. Floating Minimalist Psychological Callout Cards */}
-      {/* Card 1: The Perception Gap */}
-      <FloatingCard
-        tag="RULE 01 // PARADOX"
-        title="PERCEPTION GAP"
-        description="A neutral face doesn't look neutral to others. It projects hostility."
-        startFrame={220}
-        durationInFrames={120}
-        top="320px"
-        left="64px"
-        accent
-      />
+      {/* Scene 2: 6s - 14s ("Neutral face doesn't look neutral to everyone else.") */}
+      {currentSec >= 6 && currentSec < 14 && (
+        <>
+          <div
+            style={{
+              position: "absolute",
+              top: "220px",
+              left: "64px",
+              right: "64px",
+              zIndex: 30,
+            }}
+          >
+            <h1
+              style={{
+                fontFamily: FONTS.editorialSerif,
+                fontSize: "68px",
+                fontWeight: 800,
+                lineHeight: 1.15,
+                color: COLORS.fg,
+                letterSpacing: "-0.02em",
+                margin: 0,
+              }}
+            >
+              Because a neutral face{" "}
+              <span style={{ fontStyle: "italic", color: COLORS.accentGreen }}>
+                doesn't look neutral
+              </span>{" "}
+              to everyone else.
+            </h1>
+          </div>
 
-      {/* Card 2: Neutrality Trap */}
-      <FloatingCard
-        tag="BIOLOGICAL BIAS"
-        title="THE NEUTRAL TRAP"
-        description="Human brains fill blank expressions with projected insecurity."
-        startFrame={450}
-        durationInFrames={150}
-        top="420px"
-        right="64px"
-      />
+          <div
+            style={{
+              position: "absolute",
+              bottom: "0px",
+              left: 0,
+              right: 0,
+              height: "1280px",
+            }}
+          >
+            <ZyphStage
+              imageSrc={staticFile("zyph/zyph_18.png")}
+              align="center"
+              zoomDirection="subtle-in"
+              heightPercent={96}
+              entranceFrame={6 * fps}
+            />
+          </div>
+        </>
+      )}
 
-      {/* Card 3: The 3-Second Pause */}
-      <FloatingCard
-        tag="TACTICAL RESPONSE"
-        title="THE 3-SECOND PAUSE"
-        description="Never answer instantly. Silence absorbs your opponent's frame."
-        startFrame={855}
-        durationInFrames={140}
-        top="340px"
-        left="64px"
-        accent
-      />
+      {/* Scene 3: 14s - 21s ("Bored." - Iconic display punch) */}
+      {currentSec >= 14 && currentSec < 21 && (
+        <>
+          <div
+            style={{
+              position: "absolute",
+              top: "200px",
+              left: "64px",
+              right: "64px",
+              zIndex: 30,
+            }}
+          >
+            <h1
+              style={{
+                fontFamily: FONTS.editorialSerif,
+                fontSize: "150px",
+                fontStyle: "italic",
+                fontWeight: 900,
+                color: COLORS.accentGreen,
+                lineHeight: 0.95,
+                margin: 0,
+              }}
+            >
+              Bored.
+            </h1>
+          </div>
 
-      {/* Card 4: Emotional Neutrality */}
-      <FloatingCard
-        tag="ENDGAME"
-        title="EMOTIONAL NEUTRALITY"
-        description="Control internal pulse without faking outward masks."
-        startFrame={980}
-        durationInFrames={130}
-        top="460px"
-        right="64px"
-      />
+          <div
+            style={{
+              position: "absolute",
+              bottom: "0px",
+              left: 0,
+              right: 0,
+              height: "1350px",
+            }}
+          >
+            <ZyphStage
+              imageSrc={staticFile("zyph/zyph_2.png")}
+              align="center"
+              zoomDirection="subtle-in"
+              heightPercent={96}
+              entranceFrame={14 * fps}
+            />
+          </div>
+        </>
+      )}
 
-      {/* 7. Bold Word-by-Word Kinetic Captions (Lower third) */}
-      <Captions words={words} bottomOffset="17%" maxWordsPerChunk={4} />
+      {/* Scene 4: 21s - 36s ("Today, no basics." with strikethrough & pointer) */}
+      {currentSec >= 21 && (
+        <>
+          <div
+            style={{
+              position: "absolute",
+              top: "220px",
+              left: "64px",
+              right: "64px",
+              zIndex: 30,
+            }}
+          >
+            <h1
+              style={{
+                fontFamily: FONTS.editorialSerif,
+                fontSize: "88px",
+                fontWeight: 800,
+                lineHeight: 1.1,
+                color: COLORS.fg,
+                margin: 0,
+              }}
+            >
+              Today, no{" "}
+              <span
+                style={{
+                  position: "relative",
+                  color: COLORS.muted,
+                  display: "inline-block",
+                }}
+              >
+                basics.
+                <span
+                  style={{
+                    position: "absolute",
+                    left: 0,
+                    top: "55%",
+                    height: "5px",
+                    width: "100%",
+                    backgroundColor: COLORS.accentGreen,
+                    borderRadius: "3px",
+                  }}
+                />
+              </span>
+            </h1>
+          </div>
 
-      {/* 8. Animated Top Progress Bar */}
-      <ProgressBar top="0px" height={6} color={COLORS.accentRed} />
+          <div
+            style={{
+              position: "absolute",
+              bottom: "0px",
+              left: 0,
+              right: 0,
+              height: "1320px",
+            }}
+          >
+            <ZyphStage
+              imageSrc={staticFile("zyph/zyph_13.png")}
+              align="center"
+              zoomDirection="subtle-in"
+              heightPercent={96}
+              entranceFrame={21 * fps}
+            />
+          </div>
+        </>
+      )}
+
+      {/* Bottom Progress Line */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: "0px",
+          left: 0,
+          right: 0,
+          height: "6px",
+          backgroundColor: "rgba(0,0,0,0.06)",
+          zIndex: 50,
+        }}
+      >
+        <div
+          style={{
+            height: "100%",
+            width: `${Math.min(100, (currentSec / 36) * 100)}%`,
+            backgroundColor: COLORS.accentGreen,
+          }}
+        />
+      </div>
     </div>
   );
 };

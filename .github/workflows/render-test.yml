@@ -22,7 +22,7 @@ jobs:
   cloud-render:
     name: Cloud Render MP4s & Thumbnail
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 60
 
     steps:
       - name: Checkout Repository
@@ -55,20 +55,20 @@ jobs:
       - name: Create Output Directory
         run: mkdir -p out
 
-      - name: Render 9:16 Short (PokerFaceShort)
-        if: ${{ github.event_name != 'workflow_dispatch' || inputs.render_short }}
-        run: |
-          npx remotion render PokerFaceShort out/poker-face-short.mp4 --concurrency=2
-
-      - name: Render 16:9 Long-Form (PokerFaceLong)
-        if: ${{ github.event_name != 'workflow_dispatch' || inputs.render_long }}
-        run: |
-          npx remotion render PokerFaceLong out/poker-face-long.mp4 --concurrency=2
-
       - name: Render High-CTR Thumbnail (PokerFaceThumb)
         if: ${{ github.event_name != 'workflow_dispatch' || inputs.render_thumb }}
         run: |
           npx remotion still PokerFaceThumb out/poker-face-thumb.png
+
+      - name: Render 9:16 Short (PokerFaceShort)
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.render_short }}
+        run: |
+          npx remotion render PokerFaceShort out/poker-face-short.mp4 --concurrency=4
+
+      - name: Render 16:9 Full Masterclass (PokerFaceLong)
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.render_long }}
+        run: |
+          npx remotion render PokerFaceLong out/poker-face-long.mp4 --concurrency=4
 
       - name: Upload Rendered Artifacts
         uses: actions/upload-artifact@v4
