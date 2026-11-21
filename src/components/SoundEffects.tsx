@@ -1,6 +1,6 @@
 import React from "react";
 import { Audio, Sequence, staticFile } from "remotion";
-import { SoundCue } from "../types.js";
+import { SoundCue } from "../types";
 
 interface SoundEffectsProps {
   cues: SoundCue[];

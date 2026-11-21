@@ -1,8 +1,8 @@
 import React from "react";
 import { Composition, Still } from "remotion";
-import { PokerFaceLong } from "./compositions/PokerFaceLong.js";
-import { PokerFaceShort } from "./compositions/PokerFaceShort.js";
-import { PokerFaceThumb } from "./compositions/PokerFaceThumb.js";
+import { PokerFaceLong } from "./compositions/PokerFaceLong";
+import { PokerFaceShort } from "./compositions/PokerFaceShort";
+import { PokerFaceThumb } from "./compositions/PokerFaceThumb";
 
 export const Root: React.FC = () => {
   return (

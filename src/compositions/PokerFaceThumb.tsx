@@ -1,6 +1,6 @@
 import React from "react";
 import { Img, staticFile } from "remotion";
-import { COLORS, FONTS } from "../constants.js";
+import { COLORS, FONTS } from "../constants";
 
 export const PokerFaceThumb: React.FC = () => {
   return (

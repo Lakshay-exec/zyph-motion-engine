@@ -1,6 +1,6 @@
 import React from "react";
 import { interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
-import { COLORS, FONTS } from "../constants.js";
+import { COLORS, FONTS } from "../constants";
 
 interface DiagramProps {
   chapter: string;

@@ -1,6 +1,6 @@
 import React from "react";
 import { useCurrentFrame, useVideoConfig } from "remotion";
-import { COLORS } from "../constants.js";
+import { COLORS } from "../constants";
 
 interface ProgressBarProps {
   top?: string;

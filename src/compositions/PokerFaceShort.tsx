@@ -8,14 +8,14 @@ import {
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
-import { Captions } from "../components/Captions.js";
-import { FloatingCard } from "../components/FloatingCard.js";
-import { ProgressBar } from "../components/ProgressBar.js";
-import { SoundEffects } from "../components/SoundEffects.js";
-import { ZyphStage } from "../components/ZyphStage.js";
-import { COLORS, FONTS } from "../constants.js";
-import { TRANSCRIPT_SEGMENTS } from "../data/scriptData.js";
-import { SoundCue, WordTimestamp } from "../types.js";
+import { Captions } from "../components/Captions";
+import { FloatingCard } from "../components/FloatingCard";
+import { ProgressBar } from "../components/ProgressBar";
+import { SoundEffects } from "../components/SoundEffects";
+import { ZyphStage } from "../components/ZyphStage";
+import { COLORS, FONTS } from "../constants";
+import { TRANSCRIPT_SEGMENTS } from "../data/scriptData";
+import { SoundCue, WordTimestamp } from "../types";
 
 export const PokerFaceShort: React.FC = () => {
   const frame = useCurrentFrame();

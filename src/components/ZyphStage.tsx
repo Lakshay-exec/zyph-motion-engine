@@ -1,6 +1,6 @@
 import React from "react";
 import { Img, interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
-import { COLORS } from "../constants.js";
+import { COLORS } from "../constants";
 
 interface ZyphStageProps {
   imageSrc: string;

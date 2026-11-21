@@ -1,7 +1,7 @@
 import React from "react";
 import { interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
-import { COLORS, FONTS } from "../constants.js";
-import { WordTimestamp } from "../types.js";
+import { COLORS, FONTS } from "../constants";
+import { WordTimestamp } from "../types";
 
 interface CaptionsProps {
   words: WordTimestamp[];
