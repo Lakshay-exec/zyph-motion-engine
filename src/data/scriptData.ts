@@ -1,0 +1,5356 @@
+// Auto-generated transcript data with word-level timestamps
+export interface WordTimestamp {
+  word: string;
+  start: number;
+  end: number;
+}
+
+export interface Segment {
+  id: number;
+  start: number;
+  end: number;
+  text: string;
+  words: WordTimestamp[];
+}
+
+export const TRANSCRIPT_SEGMENTS: Segment[] = [
+  {
+    "id": 1,
+    "start": 0.0,
+    "end": 6.12,
+    "text": "I spent years building the perfect poker face, and I was wrong about it.",
+    "words": [
+      {
+        "word": "I",
+        "start": 0.0,
+        "end": 0.22
+      },
+      {
+        "word": "spent",
+        "start": 0.22,
+        "end": 0.44
+      },
+      {
+        "word": "years",
+        "start": 0.44,
+        "end": 0.96
+      },
+      {
+        "word": "building",
+        "start": 0.96,
+        "end": 1.38
+      },
+      {
+        "word": "the",
+        "start": 1.38,
+        "end": 1.86
+      },
+      {
+        "word": "perfect",
+        "start": 1.86,
+        "end": 2.26
+      },
+      {
+        "word": "poker",
+        "start": 2.26,
+        "end": 2.7
+      },
+      {
+        "word": "face,",
+        "start": 2.7,
+        "end": 3.42
+      },
+      {
+        "word": "and",
+        "start": 3.88,
+        "end": 3.98
+      },
+      {
+        "word": "I",
+        "start": 3.98,
+        "end": 4.06
+      },
+      {
+        "word": "was",
+        "start": 4.06,
+        "end": 4.32
+      },
+      {
+        "word": "wrong",
+        "start": 4.32,
+        "end": 4.52
+      },
+      {
+        "word": "about",
+        "start": 4.52,
+        "end": 4.84
+      },
+      {
+        "word": "it.",
+        "start": 4.84,
+        "end": 6.12
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "start": 7.28,
+    "end": 10.98,
+    "text": "Not about what it is, about what it does to the people around you,",
+    "words": [
+      {
+        "word": "Not",
+        "start": 7.28,
+        "end": 7.4
+      },
+      {
+        "word": "about",
+        "start": 7.4,
+        "end": 7.64
+      },
+      {
+        "word": "what",
+        "start": 7.64,
+        "end": 7.86
+      },
+      {
+        "word": "it",
+        "start": 7.86,
+        "end": 7.92
+      },
+      {
+        "word": "is,",
+        "start": 7.92,
+        "end": 8.56
+      },
+      {
+        "word": "about",
+        "start": 8.84,
+        "end": 8.98
+      },
+      {
+        "word": "what",
+        "start": 8.98,
+        "end": 9.12
+      },
+      {
+        "word": "it",
+        "start": 9.12,
+        "end": 9.24
+      },
+      {
+        "word": "does",
+        "start": 9.24,
+        "end": 9.44
+      },
+      {
+        "word": "to",
+        "start": 9.44,
+        "end": 9.66
+      },
+      {
+        "word": "the",
+        "start": 9.66,
+        "end": 9.78
+      },
+      {
+        "word": "people",
+        "start": 9.78,
+        "end": 10.04
+      },
+      {
+        "word": "around",
+        "start": 10.04,
+        "end": 10.4
+      },
+      {
+        "word": "you,",
+        "start": 10.4,
+        "end": 10.98
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "start": 11.24,
+    "end": 14.5,
+    "text": "because a neutral face doesn't look neutral to everyone else.",
+    "words": [
+      {
+        "word": "because",
+        "start": 11.24,
+        "end": 11.42
+      },
+      {
+        "word": "a",
+        "start": 11.42,
+        "end": 11.64
+      },
+      {
+        "word": "neutral",
+        "start": 11.64,
+        "end": 11.94
+      },
+      {
+        "word": "face",
+        "start": 11.94,
+        "end": 12.38
+      },
+      {
+        "word": "doesn't",
+        "start": 12.38,
+        "end": 12.7
+      },
+      {
+        "word": "look",
+        "start": 12.7,
+        "end": 12.96
+      },
+      {
+        "word": "neutral",
+        "start": 12.96,
+        "end": 13.36
+      },
+      {
+        "word": "to",
+        "start": 13.36,
+        "end": 13.72
+      },
+      {
+        "word": "everyone",
+        "start": 13.72,
+        "end": 13.96
+      },
+      {
+        "word": "else.",
+        "start": 13.96,
+        "end": 14.5
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "start": 14.98,
+    "end": 19.74,
+    "text": "It looks sad, angry, bored, sometimes even arrogant.",
+    "words": [
+      {
+        "word": "It",
+        "start": 14.98,
+        "end": 15.12
+      },
+      {
+        "word": "looks",
+        "start": 15.12,
+        "end": 15.38
+      },
+      {
+        "word": "sad,",
+        "start": 15.38,
+        "end": 15.88
+      },
+      {
+        "word": "angry,",
+        "start": 16.44,
+        "end": 16.66
+      },
+      {
+        "word": "bored,",
+        "start": 17.44,
+        "end": 17.88
+      },
+      {
+        "word": "sometimes",
+        "start": 18.36,
+        "end": 18.8
+      },
+      {
+        "word": "even",
+        "start": 18.8,
+        "end": 19.3
+      },
+      {
+        "word": "arrogant.",
+        "start": 19.3,
+        "end": 19.74
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "start": 21.66,
+    "end": 24.82,
+    "text": "Today we're skipping the basics everyone already knows.",
+    "words": [
+      {
+        "word": "Today",
+        "start": 21.66,
+        "end": 21.98
+      },
+      {
+        "word": "we're",
+        "start": 21.98,
+        "end": 22.44
+      },
+      {
+        "word": "skipping",
+        "start": 22.44,
+        "end": 22.7
+      },
+      {
+        "word": "the",
+        "start": 22.7,
+        "end": 23.0
+      },
+      {
+        "word": "basics",
+        "start": 23.0,
+        "end": 23.36
+      },
+      {
+        "word": "everyone",
+        "start": 23.36,
+        "end": 23.86
+      },
+      {
+        "word": "already",
+        "start": 23.86,
+        "end": 24.38
+      },
+      {
+        "word": "knows.",
+        "start": 24.38,
+        "end": 24.82
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "start": 25.36,
+    "end": 27.88,
+    "text": "No, stay calm and breathe.",
+    "words": [
+      {
+        "word": "No,",
+        "start": 25.36,
+        "end": 25.66
+      },
+      {
+        "word": "stay",
+        "start": 26.28,
+        "end": 26.56
+      },
+      {
+        "word": "calm",
+        "start": 26.56,
+        "end": 27.02
+      },
+      {
+        "word": "and",
+        "start": 27.02,
+        "end": 27.42
+      },
+      {
+        "word": "breathe.",
+        "start": 27.42,
+        "end": 27.88
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "start": 28.44,
+    "end": 32.24,
+    "text": "We're covering what happens in real life when your face stays blank,",
+    "words": [
+      {
+        "word": "We're",
+        "start": 28.44,
+        "end": 28.92
+      },
+      {
+        "word": "covering",
+        "start": 28.92,
+        "end": 29.2
+      },
+      {
+        "word": "what",
+        "start": 29.2,
+        "end": 29.5
+      },
+      {
+        "word": "happens",
+        "start": 29.5,
+        "end": 29.84
+      },
+      {
+        "word": "in",
+        "start": 29.84,
+        "end": 30.1
+      },
+      {
+        "word": "real",
+        "start": 30.1,
+        "end": 30.3
+      },
+      {
+        "word": "life",
+        "start": 30.3,
+        "end": 30.7
+      },
+      {
+        "word": "when",
+        "start": 30.7,
+        "end": 30.92
+      },
+      {
+        "word": "your",
+        "start": 30.92,
+        "end": 31.22
+      },
+      {
+        "word": "face",
+        "start": 31.22,
+        "end": 31.44
+      },
+      {
+        "word": "stays",
+        "start": 31.44,
+        "end": 31.72
+      },
+      {
+        "word": "blank,",
+        "start": 31.72,
+        "end": 32.24
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "start": 32.68,
+    "end": 35.88,
+    "text": "and how to fix it without faking a single emotion.",
+    "words": [
+      {
+        "word": "and",
+        "start": 32.68,
+        "end": 32.84
+      },
+      {
+        "word": "how",
+        "start": 32.84,
+        "end": 33.0
+      },
+      {
+        "word": "to",
+        "start": 33.0,
+        "end": 33.2
+      },
+      {
+        "word": "fix",
+        "start": 33.2,
+        "end": 33.42
+      },
+      {
+        "word": "it",
+        "start": 33.42,
+        "end": 33.82
+      },
+      {
+        "word": "without",
+        "start": 33.82,
+        "end": 34.22
+      },
+      {
+        "word": "faking",
+        "start": 34.22,
+        "end": 34.7
+      },
+      {
+        "word": "a",
+        "start": 34.7,
+        "end": 35.02
+      },
+      {
+        "word": "single",
+        "start": 35.02,
+        "end": 35.22
+      },
+      {
+        "word": "emotion.",
+        "start": 35.22,
+        "end": 35.88
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "start": 38.08,
+    "end": 42.46,
+    "text": "If you already know what a poker face is, skip ahead 20 seconds.",
+    "words": [
+      {
+        "word": "If",
+        "start": 38.08,
+        "end": 38.14
+      },
+      {
+        "word": "you",
+        "start": 38.14,
+        "end": 38.34
+      },
+      {
+        "word": "already",
+        "start": 38.34,
+        "end": 38.6
+      },
+      {
+        "word": "know",
+        "start": 38.6,
+        "end": 38.98
+      },
+      {
+        "word": "what",
+        "start": 38.98,
+        "end": 39.2
+      },
+      {
+        "word": "a",
+        "start": 39.2,
+        "end": 39.44
+      },
+      {
+        "word": "poker",
+        "start": 39.44,
+        "end": 39.64
+      },
+      {
+        "word": "face",
+        "start": 39.64,
+        "end": 39.88
+      },
+      {
+        "word": "is,",
+        "start": 39.88,
+        "end": 40.48
+      },
+      {
+        "word": "skip",
+        "start": 40.78,
+        "end": 40.92
+      },
+      {
+        "word": "ahead",
+        "start": 40.92,
+        "end": 41.3
+      },
+      {
+        "word": "20",
+        "start": 41.3,
+        "end": 41.82
+      },
+      {
+        "word": "seconds.",
+        "start": 41.82,
+        "end": 42.46
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "start": 43.2,
+    "end": 45.82,
+    "text": "Everyone else, here's the short version.",
+    "words": [
+      {
+        "word": "Everyone",
+        "start": 43.2,
+        "end": 43.44
+      },
+      {
+        "word": "else,",
+        "start": 43.44,
+        "end": 43.94
+      },
+      {
+        "word": "here's",
+        "start": 44.5,
+        "end": 44.8
+      },
+      {
+        "word": "the",
+        "start": 44.8,
+        "end": 45.04
+      },
+      {
+        "word": "short",
+        "start": 45.04,
+        "end": 45.26
+      },
+      {
+        "word": "version.",
+        "start": 45.26,
+        "end": 45.82
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "start": 47.62,
+    "end": 50.94,
+    "text": "A poker face is a steady expression that gives nothing away.",
+    "words": [
+      {
+        "word": "A",
+        "start": 47.62,
+        "end": 47.74
+      },
+      {
+        "word": "poker",
+        "start": 47.74,
+        "end": 48.04
+      },
+      {
+        "word": "face",
+        "start": 48.04,
+        "end": 48.34
+      },
+      {
+        "word": "is",
+        "start": 48.34,
+        "end": 48.54
+      },
+      {
+        "word": "a",
+        "start": 48.54,
+        "end": 48.82
+      },
+      {
+        "word": "steady",
+        "start": 48.82,
+        "end": 49.04
+      },
+      {
+        "word": "expression",
+        "start": 49.04,
+        "end": 49.56
+      },
+      {
+        "word": "that",
+        "start": 49.56,
+        "end": 49.88
+      },
+      {
+        "word": "gives",
+        "start": 49.88,
+        "end": 50.12
+      },
+      {
+        "word": "nothing",
+        "start": 50.12,
+        "end": 50.5
+      },
+      {
+        "word": "away.",
+        "start": 50.5,
+        "end": 50.94
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "start": 51.72,
+    "end": 54.82,
+    "text": "poker players use it so opponents can't read their hand.",
+    "words": [
+      {
+        "word": "poker",
+        "start": 51.72,
+        "end": 51.84
+      },
+      {
+        "word": "players",
+        "start": 51.84,
+        "end": 52.2
+      },
+      {
+        "word": "use",
+        "start": 52.2,
+        "end": 52.52
+      },
+      {
+        "word": "it",
+        "start": 52.52,
+        "end": 52.82
+      },
+      {
+        "word": "so",
+        "start": 52.82,
+        "end": 53.02
+      },
+      {
+        "word": "opponents",
+        "start": 53.02,
+        "end": 53.5
+      },
+      {
+        "word": "can't",
+        "start": 53.5,
+        "end": 53.94
+      },
+      {
+        "word": "read",
+        "start": 53.94,
+        "end": 54.14
+      },
+      {
+        "word": "their",
+        "start": 54.14,
+        "end": 54.46
+      },
+      {
+        "word": "hand.",
+        "start": 54.46,
+        "end": 54.82
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "start": 54.82,
+    "end": 57.92,
+    "text": "In daily life it means your face looks the same,",
+    "words": [
+      {
+        "word": "In",
+        "start": 54.82,
+        "end": 55.48
+      },
+      {
+        "word": "daily",
+        "start": 55.48,
+        "end": 55.72
+      },
+      {
+        "word": "life",
+        "start": 55.72,
+        "end": 56.12
+      },
+      {
+        "word": "it",
+        "start": 56.12,
+        "end": 56.26
+      },
+      {
+        "word": "means",
+        "start": 56.26,
+        "end": 56.44
+      },
+      {
+        "word": "your",
+        "start": 56.44,
+        "end": 56.7
+      },
+      {
+        "word": "face",
+        "start": 56.7,
+        "end": 57.0
+      },
+      {
+        "word": "looks",
+        "start": 57.0,
+        "end": 57.3
+      },
+      {
+        "word": "the",
+        "start": 57.3,
+        "end": 57.66
+      },
+      {
+        "word": "same,",
+        "start": 57.66,
+        "end": 57.92
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "start": 58.02,
+    "end": 62.26,
+    "text": "whether the news is good or bad, not blank, steady.",
+    "words": [
+      {
+        "word": "whether",
+        "start": 58.02,
+        "end": 58.2
+      },
+      {
+        "word": "the",
+        "start": 58.2,
+        "end": 58.44
+      },
+      {
+        "word": "news",
+        "start": 58.44,
+        "end": 58.62
+      },
+      {
+        "word": "is",
+        "start": 58.62,
+        "end": 58.9
+      },
+      {
+        "word": "good",
+        "start": 58.9,
+        "end": 59.2
+      },
+      {
+        "word": "or",
+        "start": 59.2,
+        "end": 59.52
+      },
+      {
+        "word": "bad,",
+        "start": 59.52,
+        "end": 60.04
+      },
+      {
+        "word": "not",
+        "start": 60.62,
+        "end": 60.8
+      },
+      {
+        "word": "blank,",
+        "start": 60.8,
+        "end": 61.18
+      },
+      {
+        "word": "steady.",
+        "start": 61.94,
+        "end": 62.26
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "start": 64.46,
+    "end": 66.32,
+    "text": "Sounds like pure advantage, right?",
+    "words": [
+      {
+        "word": "Sounds",
+        "start": 64.46,
+        "end": 64.6
+      },
+      {
+        "word": "like",
+        "start": 64.6,
+        "end": 65.02
+      },
+      {
+        "word": "pure",
+        "start": 65.02,
+        "end": 65.32
+      },
+      {
+        "word": "advantage,",
+        "start": 65.32,
+        "end": 65.76
+      },
+      {
+        "word": "right?",
+        "start": 66.32,
+        "end": 66.32
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "start": 66.94,
+    "end": 70.1,
+    "text": "Nobody can read you, nobody can use your emotions against you.",
+    "words": [
+      {
+        "word": "Nobody",
+        "start": 66.94,
+        "end": 67.14
+      },
+      {
+        "word": "can",
+        "start": 67.14,
+        "end": 67.48
+      },
+      {
+        "word": "read",
+        "start": 67.48,
+        "end": 67.66
+      },
+      {
+        "word": "you,",
+        "start": 67.66,
+        "end": 68.0
+      },
+      {
+        "word": "nobody",
+        "start": 68.34,
+        "end": 68.5
+      },
+      {
+        "word": "can",
+        "start": 68.5,
+        "end": 68.84
+      },
+      {
+        "word": "use",
+        "start": 68.84,
+        "end": 69.06
+      },
+      {
+        "word": "your",
+        "start": 69.06,
+        "end": 69.28
+      },
+      {
+        "word": "emotions",
+        "start": 69.28,
+        "end": 69.66
+      },
+      {
+        "word": "against",
+        "start": 69.66,
+        "end": 70.04
+      },
+      {
+        "word": "you.",
+        "start": 70.04,
+        "end": 70.36
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "start": 70.9,
+    "end": 74.74,
+    "text": "That's exactly what I believed, until a simple question kept showing up.",
+    "words": [
+      {
+        "word": "That's",
+        "start": 70.9,
+        "end": 71.2
+      },
+      {
+        "word": "exactly",
+        "start": 71.2,
+        "end": 71.64
+      },
+      {
+        "word": "what",
+        "start": 71.64,
+        "end": 71.78
+      },
+      {
+        "word": "I",
+        "start": 71.78,
+        "end": 71.94
+      },
+      {
+        "word": "believed,",
+        "start": 71.94,
+        "end": 72.26
+      },
+      {
+        "word": "until",
+        "start": 73.06,
+        "end": 73.18
+      },
+      {
+        "word": "a",
+        "start": 73.18,
+        "end": 73.46
+      },
+      {
+        "word": "simple",
+        "start": 73.46,
+        "end": 73.74
+      },
+      {
+        "word": "question",
+        "start": 73.74,
+        "end": 74.16
+      },
+      {
+        "word": "kept",
+        "start": 74.16,
+        "end": 74.4
+      },
+      {
+        "word": "showing",
+        "start": 74.4,
+        "end": 74.66
+      },
+      {
+        "word": "up.",
+        "start": 74.66,
+        "end": 74.98
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "start": 77.44,
+    "end": 82.42,
+    "text": "Picture this, you're in a meeting, you're relaxed, maybe even enjoying it.",
+    "words": [
+      {
+        "word": "Picture",
+        "start": 77.44,
+        "end": 77.66
+      },
+      {
+        "word": "this,",
+        "start": 77.66,
+        "end": 78.18
+      },
+      {
+        "word": "you're",
+        "start": 78.92,
+        "end": 79.1
+      },
+      {
+        "word": "in",
+        "start": 79.1,
+        "end": 79.22
+      },
+      {
+        "word": "a",
+        "start": 79.22,
+        "end": 79.32
+      },
+      {
+        "word": "meeting,",
+        "start": 79.32,
+        "end": 79.66
+      },
+      {
+        "word": "you're",
+        "start": 80.36,
+        "end": 80.58
+      },
+      {
+        "word": "relaxed,",
+        "start": 80.58,
+        "end": 80.94
+      },
+      {
+        "word": "maybe",
+        "start": 81.34,
+        "end": 81.6
+      },
+      {
+        "word": "even",
+        "start": 81.6,
+        "end": 81.96
+      },
+      {
+        "word": "enjoying",
+        "start": 81.96,
+        "end": 82.34
+      },
+      {
+        "word": "it.",
+        "start": 82.34,
+        "end": 82.66
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "start": 82.66,
+    "end": 85.38,
+    "text": "Afterwards, someone walks over an arsex.",
+    "words": [
+      {
+        "word": "Afterwards,",
+        "start": 82.66,
+        "end": 83.78
+      },
+      {
+        "word": "someone",
+        "start": 84.18,
+        "end": 84.38
+      },
+      {
+        "word": "walks",
+        "start": 84.38,
+        "end": 84.7
+      },
+      {
+        "word": "over",
+        "start": 84.7,
+        "end": 85.02
+      },
+      {
+        "word": "an",
+        "start": 85.02,
+        "end": 85.24
+      },
+      {
+        "word": "arsex.",
+        "start": 85.24,
+        "end": 85.56
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "start": 86.44,
+    "end": 88.84,
+    "text": "Hey, are you okay? Did I do something?",
+    "words": [
+      {
+        "word": "Hey,",
+        "start": 86.44,
+        "end": 86.44
+      },
+      {
+        "word": "are",
+        "start": 86.5,
+        "end": 86.64
+      },
+      {
+        "word": "you",
+        "start": 86.64,
+        "end": 86.72
+      },
+      {
+        "word": "okay?",
+        "start": 86.72,
+        "end": 87.16
+      },
+      {
+        "word": "Did",
+        "start": 87.92,
+        "end": 88.08
+      },
+      {
+        "word": "I",
+        "start": 88.08,
+        "end": 88.2
+      },
+      {
+        "word": "do",
+        "start": 88.2,
+        "end": 88.44
+      },
+      {
+        "word": "something?",
+        "start": 88.44,
+        "end": 88.84
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "start": 90.32,
+    "end": 94.96,
+    "text": "You did nothing, you felt nothing, but they saw something.",
+    "words": [
+      {
+        "word": "You",
+        "start": 90.32,
+        "end": 90.48
+      },
+      {
+        "word": "did",
+        "start": 90.48,
+        "end": 90.74
+      },
+      {
+        "word": "nothing,",
+        "start": 90.74,
+        "end": 91.14
+      },
+      {
+        "word": "you",
+        "start": 91.8,
+        "end": 92.0
+      },
+      {
+        "word": "felt",
+        "start": 92.0,
+        "end": 92.3
+      },
+      {
+        "word": "nothing,",
+        "start": 92.3,
+        "end": 92.88
+      },
+      {
+        "word": "but",
+        "start": 93.54,
+        "end": 93.84
+      },
+      {
+        "word": "they",
+        "start": 93.84,
+        "end": 94.16
+      },
+      {
+        "word": "saw",
+        "start": 94.16,
+        "end": 94.42
+      },
+      {
+        "word": "something.",
+        "start": 94.42,
+        "end": 94.96
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "start": 97.12,
+    "end": 99.28,
+    "text": "And this is the part most people miss.",
+    "words": [
+      {
+        "word": "And",
+        "start": 97.12,
+        "end": 97.22
+      },
+      {
+        "word": "this",
+        "start": 97.22,
+        "end": 97.44
+      },
+      {
+        "word": "is",
+        "start": 97.44,
+        "end": 97.64
+      },
+      {
+        "word": "the",
+        "start": 97.64,
+        "end": 97.82
+      },
+      {
+        "word": "part",
+        "start": 97.82,
+        "end": 98.06
+      },
+      {
+        "word": "most",
+        "start": 98.06,
+        "end": 98.4
+      },
+      {
+        "word": "people",
+        "start": 98.4,
+        "end": 98.8
+      },
+      {
+        "word": "miss.",
+        "start": 98.8,
+        "end": 99.28
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "start": 100.14,
+    "end": 104.1,
+    "text": "When a face gives no information, people don't leave the gap empty.",
+    "words": [
+      {
+        "word": "When",
+        "start": 100.14,
+        "end": 100.36
+      },
+      {
+        "word": "a",
+        "start": 100.36,
+        "end": 100.52
+      },
+      {
+        "word": "face",
+        "start": 100.52,
+        "end": 100.72
+      },
+      {
+        "word": "gives",
+        "start": 100.72,
+        "end": 100.98
+      },
+      {
+        "word": "no",
+        "start": 100.98,
+        "end": 101.34
+      },
+      {
+        "word": "information,",
+        "start": 101.34,
+        "end": 101.8
+      },
+      {
+        "word": "people",
+        "start": 102.46,
+        "end": 102.7
+      },
+      {
+        "word": "don't",
+        "start": 102.7,
+        "end": 103.04
+      },
+      {
+        "word": "leave",
+        "start": 103.04,
+        "end": 103.24
+      },
+      {
+        "word": "the",
+        "start": 103.24,
+        "end": 103.5
+      },
+      {
+        "word": "gap",
+        "start": 103.5,
+        "end": 103.72
+      },
+      {
+        "word": "empty.",
+        "start": 103.72,
+        "end": 104.1
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "start": 105.04,
+    "end": 107.86,
+    "text": "They fill it, attentive people especially.",
+    "words": [
+      {
+        "word": "They",
+        "start": 105.04,
+        "end": 105.28
+      },
+      {
+        "word": "fill",
+        "start": 105.28,
+        "end": 105.44
+      },
+      {
+        "word": "it,",
+        "start": 105.44,
+        "end": 106.12
+      },
+      {
+        "word": "attentive",
+        "start": 106.78,
+        "end": 106.8
+      },
+      {
+        "word": "people",
+        "start": 106.8,
+        "end": 107.3
+      },
+      {
+        "word": "especially.",
+        "start": 107.3,
+        "end": 107.86
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "start": 108.82,
+    "end": 111.18,
+    "text": "They notice your face doesn't match the moment,",
+    "words": [
+      {
+        "word": "They",
+        "start": 108.82,
+        "end": 109.0
+      },
+      {
+        "word": "notice",
+        "start": 109.0,
+        "end": 109.32
+      },
+      {
+        "word": "your",
+        "start": 109.32,
+        "end": 109.66
+      },
+      {
+        "word": "face",
+        "start": 109.66,
+        "end": 109.92
+      },
+      {
+        "word": "doesn't",
+        "start": 109.92,
+        "end": 110.26
+      },
+      {
+        "word": "match",
+        "start": 110.26,
+        "end": 110.58
+      },
+      {
+        "word": "the",
+        "start": 110.58,
+        "end": 110.78
+      },
+      {
+        "word": "moment,",
+        "start": 110.78,
+        "end": 111.18
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "start": 111.18,
+    "end": 114.06,
+    "text": "and their brain writes a story to explain it.",
+    "words": [
+      {
+        "word": "and",
+        "start": 111.18,
+        "end": 111.88
+      },
+      {
+        "word": "their",
+        "start": 111.88,
+        "end": 112.08
+      },
+      {
+        "word": "brain",
+        "start": 112.08,
+        "end": 112.42
+      },
+      {
+        "word": "writes",
+        "start": 112.42,
+        "end": 112.7
+      },
+      {
+        "word": "a",
+        "start": 112.7,
+        "end": 113.04
+      },
+      {
+        "word": "story",
+        "start": 113.04,
+        "end": 113.26
+      },
+      {
+        "word": "to",
+        "start": 113.26,
+        "end": 113.58
+      },
+      {
+        "word": "explain",
+        "start": 113.58,
+        "end": 113.9
+      },
+      {
+        "word": "it.",
+        "start": 113.9,
+        "end": 114.23
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "start": 115.14,
+    "end": 119.46,
+    "text": "Research on neutral faces suggests they're often read as carrying a motion,",
+    "words": [
+      {
+        "word": "Research",
+        "start": 115.14,
+        "end": 115.28
+      },
+      {
+        "word": "on",
+        "start": 115.28,
+        "end": 115.7
+      },
+      {
+        "word": "neutral",
+        "start": 115.7,
+        "end": 116.08
+      },
+      {
+        "word": "faces",
+        "start": 116.08,
+        "end": 116.58
+      },
+      {
+        "word": "suggests",
+        "start": 116.58,
+        "end": 117.2
+      },
+      {
+        "word": "they're",
+        "start": 117.2,
+        "end": 117.5
+      },
+      {
+        "word": "often",
+        "start": 117.5,
+        "end": 117.76
+      },
+      {
+        "word": "read",
+        "start": 117.76,
+        "end": 118.1
+      },
+      {
+        "word": "as",
+        "start": 118.1,
+        "end": 118.5
+      },
+      {
+        "word": "carrying",
+        "start": 118.5,
+        "end": 118.82
+      },
+      {
+        "word": "a",
+        "start": 118.82,
+        "end": 119.08
+      },
+      {
+        "word": "motion,",
+        "start": 119.08,
+        "end": 119.46
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "start": 120.02,
+    "end": 121.5,
+    "text": "and it's usually a negative one.",
+    "words": [
+      {
+        "word": "and",
+        "start": 120.02,
+        "end": 120.1
+      },
+      {
+        "word": "it's",
+        "start": 120.1,
+        "end": 120.28
+      },
+      {
+        "word": "usually",
+        "start": 120.28,
+        "end": 120.62
+      },
+      {
+        "word": "a",
+        "start": 120.62,
+        "end": 121.08
+      },
+      {
+        "word": "negative",
+        "start": 121.08,
+        "end": 121.32
+      },
+      {
+        "word": "one.",
+        "start": 121.32,
+        "end": 121.65
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "start": 122.56,
+    "end": 129.82,
+    "text": "So a calm face becomes, he's upset, or she's judging me, or he doesn't like me.",
+    "words": [
+      {
+        "word": "So",
+        "start": 122.56,
+        "end": 122.7
+      },
+      {
+        "word": "a",
+        "start": 122.7,
+        "end": 122.88
+      },
+      {
+        "word": "calm",
+        "start": 122.88,
+        "end": 123.18
+      },
+      {
+        "word": "face",
+        "start": 123.18,
+        "end": 123.56
+      },
+      {
+        "word": "becomes,",
+        "start": 123.56,
+        "end": 124.16
+      },
+      {
+        "word": "he's",
+        "start": 124.44,
+        "end": 124.84
+      },
+      {
+        "word": "upset,",
+        "start": 124.84,
+        "end": 125.32
+      },
+      {
+        "word": "or",
+        "start": 126.04,
+        "end": 126.26
+      },
+      {
+        "word": "she's",
+        "start": 126.26,
+        "end": 126.92
+      },
+      {
+        "word": "judging",
+        "start": 126.92,
+        "end": 127.14
+      },
+      {
+        "word": "me,",
+        "start": 127.14,
+        "end": 127.94
+      },
+      {
+        "word": "or",
+        "start": 128.3,
+        "end": 128.58
+      },
+      {
+        "word": "he",
+        "start": 128.58,
+        "end": 129.16
+      },
+      {
+        "word": "doesn't",
+        "start": 129.16,
+        "end": 129.48
+      },
+      {
+        "word": "like",
+        "start": 129.48,
+        "end": 129.74
+      },
+      {
+        "word": "me.",
+        "start": 129.74,
+        "end": 130.07
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "start": 131.78,
+    "end": 137.84,
+    "text": "So the poker face that was supposed to give you control, quietly handed the narrative to everyone else.",
+    "words": [
+      {
+        "word": "So",
+        "start": 131.78,
+        "end": 131.94
+      },
+      {
+        "word": "the",
+        "start": 131.94,
+        "end": 132.12
+      },
+      {
+        "word": "poker",
+        "start": 132.12,
+        "end": 132.42
+      },
+      {
+        "word": "face",
+        "start": 132.42,
+        "end": 132.72
+      },
+      {
+        "word": "that",
+        "start": 132.72,
+        "end": 132.88
+      },
+      {
+        "word": "was",
+        "start": 132.88,
+        "end": 133.04
+      },
+      {
+        "word": "supposed",
+        "start": 133.04,
+        "end": 133.38
+      },
+      {
+        "word": "to",
+        "start": 133.38,
+        "end": 133.56
+      },
+      {
+        "word": "give",
+        "start": 133.56,
+        "end": 133.8
+      },
+      {
+        "word": "you",
+        "start": 133.8,
+        "end": 134.0
+      },
+      {
+        "word": "control,",
+        "start": 134.0,
+        "end": 134.54
+      },
+      {
+        "word": "quietly",
+        "start": 135.2,
+        "end": 135.5
+      },
+      {
+        "word": "handed",
+        "start": 135.5,
+        "end": 136.0
+      },
+      {
+        "word": "the",
+        "start": 136.0,
+        "end": 136.26
+      },
+      {
+        "word": "narrative",
+        "start": 136.26,
+        "end": 136.54
+      },
+      {
+        "word": "to",
+        "start": 136.54,
+        "end": 136.94
+      },
+      {
+        "word": "everyone",
+        "start": 136.94,
+        "end": 137.24
+      },
+      {
+        "word": "else.",
+        "start": 137.24,
+        "end": 137.84
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "start": 137.84,
+    "end": 143.42,
+    "text": "You wanted to be unreadable, what you became is easy to miss read,",
+    "words": [
+      {
+        "word": "You",
+        "start": 137.84,
+        "end": 138.66
+      },
+      {
+        "word": "wanted",
+        "start": 138.66,
+        "end": 139.0
+      },
+      {
+        "word": "to",
+        "start": 139.0,
+        "end": 139.18
+      },
+      {
+        "word": "be",
+        "start": 139.18,
+        "end": 139.48
+      },
+      {
+        "word": "unreadable,",
+        "start": 139.48,
+        "end": 140.22
+      },
+      {
+        "word": "what",
+        "start": 141.02,
+        "end": 141.18
+      },
+      {
+        "word": "you",
+        "start": 141.18,
+        "end": 141.26
+      },
+      {
+        "word": "became",
+        "start": 141.26,
+        "end": 141.74
+      },
+      {
+        "word": "is",
+        "start": 141.74,
+        "end": 142.16
+      },
+      {
+        "word": "easy",
+        "start": 142.16,
+        "end": 142.52
+      },
+      {
+        "word": "to",
+        "start": 142.52,
+        "end": 142.78
+      },
+      {
+        "word": "miss",
+        "start": 142.78,
+        "end": 143.04
+      },
+      {
+        "word": "read,",
+        "start": 143.04,
+        "end": 143.42
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "start": 145.46,
+    "end": 151.26,
+    "text": "which raises the real question. If hiding everything backfires is the answer to show everything.",
+    "words": [
+      {
+        "word": "which",
+        "start": 145.46,
+        "end": 145.56
+      },
+      {
+        "word": "raises",
+        "start": 145.56,
+        "end": 145.98
+      },
+      {
+        "word": "the",
+        "start": 145.98,
+        "end": 146.34
+      },
+      {
+        "word": "real",
+        "start": 146.34,
+        "end": 146.52
+      },
+      {
+        "word": "question.",
+        "start": 146.52,
+        "end": 147.24
+      },
+      {
+        "word": "If",
+        "start": 147.76,
+        "end": 148.02
+      },
+      {
+        "word": "hiding",
+        "start": 148.02,
+        "end": 148.34
+      },
+      {
+        "word": "everything",
+        "start": 148.34,
+        "end": 148.74
+      },
+      {
+        "word": "backfires",
+        "start": 148.74,
+        "end": 149.48
+      },
+      {
+        "word": "is",
+        "start": 149.48,
+        "end": 149.86
+      },
+      {
+        "word": "the",
+        "start": 149.86,
+        "end": 150.02
+      },
+      {
+        "word": "answer",
+        "start": 150.02,
+        "end": 150.28
+      },
+      {
+        "word": "to",
+        "start": 150.28,
+        "end": 150.58
+      },
+      {
+        "word": "show",
+        "start": 150.58,
+        "end": 150.78
+      },
+      {
+        "word": "everything.",
+        "start": 150.78,
+        "end": 151.26
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "start": 152.18,
+    "end": 158.8,
+    "text": "No, that's the opposite mistake, and it has its own cost. The answer is much smaller than that.",
+    "words": [
+      {
+        "word": "No,",
+        "start": 152.18,
+        "end": 152.5
+      },
+      {
+        "word": "that's",
+        "start": 153.04,
+        "end": 153.38
+      },
+      {
+        "word": "the",
+        "start": 153.38,
+        "end": 153.54
+      },
+      {
+        "word": "opposite",
+        "start": 153.54,
+        "end": 153.8
+      },
+      {
+        "word": "mistake,",
+        "start": 153.8,
+        "end": 154.3
+      },
+      {
+        "word": "and",
+        "start": 154.96,
+        "end": 155.02
+      },
+      {
+        "word": "it",
+        "start": 155.02,
+        "end": 155.22
+      },
+      {
+        "word": "has",
+        "start": 155.22,
+        "end": 155.36
+      },
+      {
+        "word": "its",
+        "start": 155.36,
+        "end": 155.66
+      },
+      {
+        "word": "own",
+        "start": 155.66,
+        "end": 155.9
+      },
+      {
+        "word": "cost.",
+        "start": 155.9,
+        "end": 156.34
+      },
+      {
+        "word": "The",
+        "start": 157.08,
+        "end": 157.3
+      },
+      {
+        "word": "answer",
+        "start": 157.3,
+        "end": 157.54
+      },
+      {
+        "word": "is",
+        "start": 157.54,
+        "end": 157.88
+      },
+      {
+        "word": "much",
+        "start": 157.88,
+        "end": 158.2
+      },
+      {
+        "word": "smaller",
+        "start": 158.2,
+        "end": 158.52
+      },
+      {
+        "word": "than",
+        "start": 158.52,
+        "end": 158.74
+      },
+      {
+        "word": "that.",
+        "start": 158.74,
+        "end": 159.06
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "start": 160.96,
+    "end": 166.1,
+    "text": "Neutral and unreadable are two different things. You don't need to add a motion.",
+    "words": [
+      {
+        "word": "Neutral",
+        "start": 160.96,
+        "end": 161.32
+      },
+      {
+        "word": "and",
+        "start": 161.32,
+        "end": 161.66
+      },
+      {
+        "word": "unreadable",
+        "start": 161.66,
+        "end": 162.26
+      },
+      {
+        "word": "are",
+        "start": 162.26,
+        "end": 162.56
+      },
+      {
+        "word": "two",
+        "start": 162.56,
+        "end": 162.82
+      },
+      {
+        "word": "different",
+        "start": 162.82,
+        "end": 163.12
+      },
+      {
+        "word": "things.",
+        "start": 163.12,
+        "end": 163.76
+      },
+      {
+        "word": "You",
+        "start": 164.54,
+        "end": 164.62
+      },
+      {
+        "word": "don't",
+        "start": 164.62,
+        "end": 164.84
+      },
+      {
+        "word": "need",
+        "start": 164.84,
+        "end": 165.1
+      },
+      {
+        "word": "to",
+        "start": 165.1,
+        "end": 165.32
+      },
+      {
+        "word": "add",
+        "start": 165.32,
+        "end": 165.5
+      },
+      {
+        "word": "a",
+        "start": 165.5,
+        "end": 165.68
+      },
+      {
+        "word": "motion.",
+        "start": 165.68,
+        "end": 166.1
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "start": 166.66,
+    "end": 168.1,
+    "text": "You need to add signals.",
+    "words": [
+      {
+        "word": "You",
+        "start": 166.66,
+        "end": 167.0
+      },
+      {
+        "word": "need",
+        "start": 167.0,
+        "end": 167.24
+      },
+      {
+        "word": "to",
+        "start": 167.24,
+        "end": 167.38
+      },
+      {
+        "word": "add",
+        "start": 167.38,
+        "end": 167.58
+      },
+      {
+        "word": "signals.",
+        "start": 167.58,
+        "end": 168.1
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "start": 170.38,
+    "end": 176.52,
+    "text": "Start with your baseline. Most people who look angry while feeling calm are holding tension",
+    "words": [
+      {
+        "word": "Start",
+        "start": 170.38,
+        "end": 170.58
+      },
+      {
+        "word": "with",
+        "start": 170.58,
+        "end": 170.8
+      },
+      {
+        "word": "your",
+        "start": 170.8,
+        "end": 170.96
+      },
+      {
+        "word": "baseline.",
+        "start": 170.96,
+        "end": 171.38
+      },
+      {
+        "word": "Most",
+        "start": 172.36,
+        "end": 172.54
+      },
+      {
+        "word": "people",
+        "start": 172.54,
+        "end": 172.98
+      },
+      {
+        "word": "who",
+        "start": 172.98,
+        "end": 173.42
+      },
+      {
+        "word": "look",
+        "start": 173.42,
+        "end": 173.8
+      },
+      {
+        "word": "angry",
+        "start": 173.8,
+        "end": 174.22
+      },
+      {
+        "word": "while",
+        "start": 174.22,
+        "end": 174.76
+      },
+      {
+        "word": "feeling",
+        "start": 174.76,
+        "end": 175.04
+      },
+      {
+        "word": "calm",
+        "start": 175.04,
+        "end": 175.52
+      },
+      {
+        "word": "are",
+        "start": 175.52,
+        "end": 175.86
+      },
+      {
+        "word": "holding",
+        "start": 175.86,
+        "end": 176.08
+      },
+      {
+        "word": "tension",
+        "start": 176.08,
+        "end": 176.52
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "start": 176.52,
+    "end": 181.36,
+    "text": "without knowing it, jaw-clenched, forehead tight, eyes locked,",
+    "words": [
+      {
+        "word": "without",
+        "start": 176.52,
+        "end": 176.86
+      },
+      {
+        "word": "knowing",
+        "start": 176.86,
+        "end": 177.1
+      },
+      {
+        "word": "it,",
+        "start": 177.1,
+        "end": 177.82
+      },
+      {
+        "word": "jaw",
+        "start": 178.08,
+        "end": 178.26
+      },
+      {
+        "word": "-clenched,",
+        "start": 178.26,
+        "end": 178.68
+      },
+      {
+        "word": "forehead",
+        "start": 179.3,
+        "end": 179.58
+      },
+      {
+        "word": "tight,",
+        "start": 179.58,
+        "end": 180.1
+      },
+      {
+        "word": "eyes",
+        "start": 180.72,
+        "end": 180.8
+      },
+      {
+        "word": "locked,",
+        "start": 180.8,
+        "end": 181.36
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "start": 182.2,
+    "end": 188.18,
+    "text": "relax the jaw, unclenched the forehead, let the corners of your mouth rest very slightly up.",
+    "words": [
+      {
+        "word": "relax",
+        "start": 182.2,
+        "end": 182.4
+      },
+      {
+        "word": "the",
+        "start": 182.4,
+        "end": 182.66
+      },
+      {
+        "word": "jaw,",
+        "start": 182.66,
+        "end": 183.1
+      },
+      {
+        "word": "unclenched",
+        "start": 183.86,
+        "end": 184.26
+      },
+      {
+        "word": "the",
+        "start": 184.26,
+        "end": 184.48
+      },
+      {
+        "word": "forehead,",
+        "start": 184.48,
+        "end": 184.98
+      },
+      {
+        "word": "let",
+        "start": 185.68,
+        "end": 185.76
+      },
+      {
+        "word": "the",
+        "start": 185.76,
+        "end": 186.26
+      },
+      {
+        "word": "corners",
+        "start": 186.26,
+        "end": 186.26
+      },
+      {
+        "word": "of",
+        "start": 186.26,
+        "end": 186.5
+      },
+      {
+        "word": "your",
+        "start": 186.5,
+        "end": 186.72
+      },
+      {
+        "word": "mouth",
+        "start": 186.72,
+        "end": 186.98
+      },
+      {
+        "word": "rest",
+        "start": 186.98,
+        "end": 187.32
+      },
+      {
+        "word": "very",
+        "start": 187.32,
+        "end": 187.72
+      },
+      {
+        "word": "slightly",
+        "start": 187.72,
+        "end": 188.02
+      },
+      {
+        "word": "up.",
+        "start": 188.02,
+        "end": 188.36
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "start": 189.42,
+    "end": 194.02,
+    "text": "It should feel like doing nothing, but it reads as calm instead of cold.",
+    "words": [
+      {
+        "word": "It",
+        "start": 189.42,
+        "end": 189.44
+      },
+      {
+        "word": "should",
+        "start": 189.44,
+        "end": 189.68
+      },
+      {
+        "word": "feel",
+        "start": 189.68,
+        "end": 189.96
+      },
+      {
+        "word": "like",
+        "start": 189.96,
+        "end": 190.22
+      },
+      {
+        "word": "doing",
+        "start": 190.22,
+        "end": 190.52
+      },
+      {
+        "word": "nothing,",
+        "start": 190.52,
+        "end": 191.14
+      },
+      {
+        "word": "but",
+        "start": 191.64,
+        "end": 191.82
+      },
+      {
+        "word": "it",
+        "start": 191.82,
+        "end": 191.98
+      },
+      {
+        "word": "reads",
+        "start": 191.98,
+        "end": 192.2
+      },
+      {
+        "word": "as",
+        "start": 192.2,
+        "end": 192.6
+      },
+      {
+        "word": "calm",
+        "start": 192.6,
+        "end": 192.98
+      },
+      {
+        "word": "instead",
+        "start": 192.98,
+        "end": 193.44
+      },
+      {
+        "word": "of",
+        "start": 193.44,
+        "end": 193.7
+      },
+      {
+        "word": "cold.",
+        "start": 193.7,
+        "end": 194.02
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "start": 196.1,
+    "end": 203.14,
+    "text": "Then give one small signal in every interaction. A nod, a brief eyebrow lift when someone speaks.",
+    "words": [
+      {
+        "word": "Then",
+        "start": 196.1,
+        "end": 196.36
+      },
+      {
+        "word": "give",
+        "start": 196.36,
+        "end": 196.6
+      },
+      {
+        "word": "one",
+        "start": 196.6,
+        "end": 196.98
+      },
+      {
+        "word": "small",
+        "start": 196.98,
+        "end": 197.32
+      },
+      {
+        "word": "signal",
+        "start": 197.32,
+        "end": 197.72
+      },
+      {
+        "word": "in",
+        "start": 197.72,
+        "end": 198.16
+      },
+      {
+        "word": "every",
+        "start": 198.16,
+        "end": 198.46
+      },
+      {
+        "word": "interaction.",
+        "start": 198.46,
+        "end": 199.06
+      },
+      {
+        "word": "A",
+        "start": 199.98,
+        "end": 200.12
+      },
+      {
+        "word": "nod,",
+        "start": 200.12,
+        "end": 200.34
+      },
+      {
+        "word": "a",
+        "start": 201.08,
+        "end": 201.18
+      },
+      {
+        "word": "brief",
+        "start": 201.18,
+        "end": 201.36
+      },
+      {
+        "word": "eyebrow",
+        "start": 201.36,
+        "end": 201.74
+      },
+      {
+        "word": "lift",
+        "start": 201.74,
+        "end": 202.1
+      },
+      {
+        "word": "when",
+        "start": 202.1,
+        "end": 202.36
+      },
+      {
+        "word": "someone",
+        "start": 202.36,
+        "end": 202.72
+      },
+      {
+        "word": "speaks.",
+        "start": 202.72,
+        "end": 203.14
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "start": 203.78,
+    "end": 211.88,
+    "text": "A quick, got it. It's tiny, but it tells the other person you're engaged, and that alone removes most of the guessing.",
+    "words": [
+      {
+        "word": "A",
+        "start": 203.78,
+        "end": 203.92
+      },
+      {
+        "word": "quick,",
+        "start": 203.92,
+        "end": 204.12
+      },
+      {
+        "word": "got",
+        "start": 204.54,
+        "end": 204.8
+      },
+      {
+        "word": "it.",
+        "start": 204.8,
+        "end": 205.24
+      },
+      {
+        "word": "It's",
+        "start": 205.88,
+        "end": 206.18
+      },
+      {
+        "word": "tiny,",
+        "start": 206.18,
+        "end": 206.46
+      },
+      {
+        "word": "but",
+        "start": 206.96,
+        "end": 207.1
+      },
+      {
+        "word": "it",
+        "start": 207.1,
+        "end": 207.2
+      },
+      {
+        "word": "tells",
+        "start": 207.2,
+        "end": 207.38
+      },
+      {
+        "word": "the",
+        "start": 207.38,
+        "end": 207.58
+      },
+      {
+        "word": "other",
+        "start": 207.58,
+        "end": 207.78
+      },
+      {
+        "word": "person",
+        "start": 207.78,
+        "end": 208.14
+      },
+      {
+        "word": "you're",
+        "start": 208.14,
+        "end": 208.46
+      },
+      {
+        "word": "engaged,",
+        "start": 208.46,
+        "end": 208.88
+      },
+      {
+        "word": "and",
+        "start": 209.58,
+        "end": 209.66
+      },
+      {
+        "word": "that",
+        "start": 209.66,
+        "end": 209.86
+      },
+      {
+        "word": "alone",
+        "start": 209.86,
+        "end": 210.28
+      },
+      {
+        "word": "removes",
+        "start": 210.28,
+        "end": 210.66
+      },
+      {
+        "word": "most",
+        "start": 210.66,
+        "end": 211.18
+      },
+      {
+        "word": "of",
+        "start": 211.18,
+        "end": 211.4
+      },
+      {
+        "word": "the",
+        "start": 211.4,
+        "end": 211.52
+      },
+      {
+        "word": "guessing.",
+        "start": 211.52,
+        "end": 211.88
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "start": 213.9,
+    "end": 221.14,
+    "text": "Then use your voice. When your face stays still, tone does the work. A slightly slower",
+    "words": [
+      {
+        "word": "Then",
+        "start": 213.9,
+        "end": 214.12
+      },
+      {
+        "word": "use",
+        "start": 214.12,
+        "end": 214.32
+      },
+      {
+        "word": "your",
+        "start": 214.32,
+        "end": 214.58
+      },
+      {
+        "word": "voice.",
+        "start": 214.58,
+        "end": 215.04
+      },
+      {
+        "word": "When",
+        "start": 216.04,
+        "end": 216.2
+      },
+      {
+        "word": "your",
+        "start": 216.2,
+        "end": 216.46
+      },
+      {
+        "word": "face",
+        "start": 216.46,
+        "end": 216.74
+      },
+      {
+        "word": "stays",
+        "start": 216.74,
+        "end": 217.06
+      },
+      {
+        "word": "still,",
+        "start": 217.06,
+        "end": 217.66
+      },
+      {
+        "word": "tone",
+        "start": 218.34,
+        "end": 218.64
+      },
+      {
+        "word": "does",
+        "start": 218.64,
+        "end": 218.94
+      },
+      {
+        "word": "the",
+        "start": 218.94,
+        "end": 219.16
+      },
+      {
+        "word": "work.",
+        "start": 219.16,
+        "end": 219.58
+      },
+      {
+        "word": "A",
+        "start": 220.3,
+        "end": 220.34
+      },
+      {
+        "word": "slightly",
+        "start": 220.34,
+        "end": 220.62
+      },
+      {
+        "word": "slower",
+        "start": 220.62,
+        "end": 221.14
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "start": 221.14,
+    "end": 225.12,
+    "text": "warmer voice fixes more misreads than any facial trick.",
+    "words": [
+      {
+        "word": "warmer",
+        "start": 221.14,
+        "end": 221.66
+      },
+      {
+        "word": "voice",
+        "start": 221.66,
+        "end": 222.14
+      },
+      {
+        "word": "fixes",
+        "start": 222.14,
+        "end": 222.62
+      },
+      {
+        "word": "more",
+        "start": 222.62,
+        "end": 223.0
+      },
+      {
+        "word": "misreads",
+        "start": 223.0,
+        "end": 223.62
+      },
+      {
+        "word": "than",
+        "start": 223.62,
+        "end": 223.86
+      },
+      {
+        "word": "any",
+        "start": 223.86,
+        "end": 224.2
+      },
+      {
+        "word": "facial",
+        "start": 224.2,
+        "end": 224.5
+      },
+      {
+        "word": "trick.",
+        "start": 224.5,
+        "end": 225.12
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "start": 226.96,
+    "end": 231.62,
+    "text": "And there's one more fix that takes two seconds, but most people are too proud to use it.",
+    "words": [
+      {
+        "word": "And",
+        "start": 226.96,
+        "end": 227.0
+      },
+      {
+        "word": "there's",
+        "start": 227.0,
+        "end": 227.24
+      },
+      {
+        "word": "one",
+        "start": 227.24,
+        "end": 227.44
+      },
+      {
+        "word": "more",
+        "start": 227.44,
+        "end": 227.68
+      },
+      {
+        "word": "fix",
+        "start": 227.68,
+        "end": 227.98
+      },
+      {
+        "word": "that",
+        "start": 227.98,
+        "end": 228.18
+      },
+      {
+        "word": "takes",
+        "start": 228.18,
+        "end": 228.4
+      },
+      {
+        "word": "two",
+        "start": 228.4,
+        "end": 228.74
+      },
+      {
+        "word": "seconds,",
+        "start": 228.74,
+        "end": 229.2
+      },
+      {
+        "word": "but",
+        "start": 229.76,
+        "end": 229.92
+      },
+      {
+        "word": "most",
+        "start": 229.92,
+        "end": 230.16
+      },
+      {
+        "word": "people",
+        "start": 230.16,
+        "end": 230.48
+      },
+      {
+        "word": "are",
+        "start": 230.48,
+        "end": 230.74
+      },
+      {
+        "word": "too",
+        "start": 230.74,
+        "end": 230.98
+      },
+      {
+        "word": "proud",
+        "start": 230.98,
+        "end": 231.2
+      },
+      {
+        "word": "to",
+        "start": 231.2,
+        "end": 231.4
+      },
+      {
+        "word": "use",
+        "start": 231.4,
+        "end": 231.56
+      },
+      {
+        "word": "it.",
+        "start": 231.56,
+        "end": 231.85
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "start": 232.74,
+    "end": 238.06,
+    "text": "We'll get to it in a moment, because first you need to know how to keep all of this stable.",
+    "words": [
+      {
+        "word": "We'll",
+        "start": 232.74,
+        "end": 232.88
+      },
+      {
+        "word": "get",
+        "start": 232.88,
+        "end": 233.02
+      },
+      {
+        "word": "to",
+        "start": 233.02,
+        "end": 233.16
+      },
+      {
+        "word": "it",
+        "start": 233.16,
+        "end": 233.32
+      },
+      {
+        "word": "in",
+        "start": 233.32,
+        "end": 233.44
+      },
+      {
+        "word": "a",
+        "start": 233.44,
+        "end": 233.56
+      },
+      {
+        "word": "moment,",
+        "start": 233.56,
+        "end": 233.92
+      },
+      {
+        "word": "because",
+        "start": 234.5,
+        "end": 234.66
+      },
+      {
+        "word": "first",
+        "start": 234.66,
+        "end": 235.18
+      },
+      {
+        "word": "you",
+        "start": 235.18,
+        "end": 235.4
+      },
+      {
+        "word": "need",
+        "start": 235.4,
+        "end": 235.6
+      },
+      {
+        "word": "to",
+        "start": 235.6,
+        "end": 235.76
+      },
+      {
+        "word": "know",
+        "start": 235.76,
+        "end": 236.04
+      },
+      {
+        "word": "how",
+        "start": 236.04,
+        "end": 236.22
+      },
+      {
+        "word": "to",
+        "start": 236.22,
+        "end": 236.36
+      },
+      {
+        "word": "keep",
+        "start": 236.36,
+        "end": 236.68
+      },
+      {
+        "word": "all",
+        "start": 236.68,
+        "end": 237.0
+      },
+      {
+        "word": "of",
+        "start": 237.0,
+        "end": 237.16
+      },
+      {
+        "word": "this",
+        "start": 237.16,
+        "end": 237.38
+      },
+      {
+        "word": "stable.",
+        "start": 237.38,
+        "end": 238.06
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "start": 239.84,
+    "end": 246.66,
+    "text": "Steady doesn't mean rigid. Rigid is what people read as cold, so check your tension points regularly.",
+    "words": [
+      {
+        "word": "Steady",
+        "start": 239.84,
+        "end": 240.2
+      },
+      {
+        "word": "doesn't",
+        "start": 240.2,
+        "end": 240.64
+      },
+      {
+        "word": "mean",
+        "start": 240.64,
+        "end": 240.98
+      },
+      {
+        "word": "rigid.",
+        "start": 240.98,
+        "end": 241.3
+      },
+      {
+        "word": "Rigid",
+        "start": 242.2,
+        "end": 242.5
+      },
+      {
+        "word": "is",
+        "start": 242.5,
+        "end": 242.72
+      },
+      {
+        "word": "what",
+        "start": 242.72,
+        "end": 242.92
+      },
+      {
+        "word": "people",
+        "start": 242.92,
+        "end": 243.28
+      },
+      {
+        "word": "read",
+        "start": 243.28,
+        "end": 243.56
+      },
+      {
+        "word": "as",
+        "start": 243.56,
+        "end": 243.84
+      },
+      {
+        "word": "cold,",
+        "start": 243.84,
+        "end": 244.24
+      },
+      {
+        "word": "so",
+        "start": 244.88,
+        "end": 245.1
+      },
+      {
+        "word": "check",
+        "start": 245.1,
+        "end": 245.28
+      },
+      {
+        "word": "your",
+        "start": 245.28,
+        "end": 245.52
+      },
+      {
+        "word": "tension",
+        "start": 245.52,
+        "end": 245.86
+      },
+      {
+        "word": "points",
+        "start": 245.86,
+        "end": 246.22
+      },
+      {
+        "word": "regularly.",
+        "start": 246.22,
+        "end": 246.66
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "start": 247.22,
+    "end": 253.9,
+    "text": "Jaw, forehead, eyes. A locked face looks like anger even when you feel nothing.",
+    "words": [
+      {
+        "word": "Jaw,",
+        "start": 247.22,
+        "end": 247.72
+      },
+      {
+        "word": "forehead,",
+        "start": 248.44,
+        "end": 248.7
+      },
+      {
+        "word": "eyes.",
+        "start": 249.4,
+        "end": 249.8
+      },
+      {
+        "word": "A",
+        "start": 250.6,
+        "end": 250.68
+      },
+      {
+        "word": "locked",
+        "start": 250.68,
+        "end": 250.88
+      },
+      {
+        "word": "face",
+        "start": 250.88,
+        "end": 251.24
+      },
+      {
+        "word": "looks",
+        "start": 251.24,
+        "end": 251.52
+      },
+      {
+        "word": "like",
+        "start": 251.52,
+        "end": 251.9
+      },
+      {
+        "word": "anger",
+        "start": 251.9,
+        "end": 252.26
+      },
+      {
+        "word": "even",
+        "start": 252.26,
+        "end": 252.74
+      },
+      {
+        "word": "when",
+        "start": 252.74,
+        "end": 252.96
+      },
+      {
+        "word": "you",
+        "start": 252.96,
+        "end": 253.1
+      },
+      {
+        "word": "feel",
+        "start": 253.1,
+        "end": 253.32
+      },
+      {
+        "word": "nothing.",
+        "start": 253.32,
+        "end": 253.9
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "start": 255.68,
+    "end": 261.36,
+    "text": "The best way to test this is to record yourself on a voice or video call. Then watch it back",
+    "words": [
+      {
+        "word": "The",
+        "start": 255.68,
+        "end": 255.72
+      },
+      {
+        "word": "best",
+        "start": 255.72,
+        "end": 255.96
+      },
+      {
+        "word": "way",
+        "start": 255.96,
+        "end": 256.12
+      },
+      {
+        "word": "to",
+        "start": 256.12,
+        "end": 256.28
+      },
+      {
+        "word": "test",
+        "start": 256.28,
+        "end": 256.58
+      },
+      {
+        "word": "this",
+        "start": 256.58,
+        "end": 256.96
+      },
+      {
+        "word": "is",
+        "start": 256.96,
+        "end": 257.18
+      },
+      {
+        "word": "to",
+        "start": 257.18,
+        "end": 257.3
+      },
+      {
+        "word": "record",
+        "start": 257.3,
+        "end": 257.66
+      },
+      {
+        "word": "yourself",
+        "start": 257.66,
+        "end": 258.16
+      },
+      {
+        "word": "on",
+        "start": 258.16,
+        "end": 258.42
+      },
+      {
+        "word": "a",
+        "start": 258.42,
+        "end": 258.6
+      },
+      {
+        "word": "voice",
+        "start": 258.6,
+        "end": 258.82
+      },
+      {
+        "word": "or",
+        "start": 258.82,
+        "end": 259.08
+      },
+      {
+        "word": "video",
+        "start": 259.08,
+        "end": 259.36
+      },
+      {
+        "word": "call.",
+        "start": 259.36,
+        "end": 259.9
+      },
+      {
+        "word": "Then",
+        "start": 260.36,
+        "end": 260.56
+      },
+      {
+        "word": "watch",
+        "start": 260.56,
+        "end": 260.72
+      },
+      {
+        "word": "it",
+        "start": 260.72,
+        "end": 261.02
+      },
+      {
+        "word": "back",
+        "start": 261.02,
+        "end": 261.36
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "start": 261.36,
+    "end": 267.42,
+    "text": "with the sound off. Write down what a stranger would guess you're feeling. It's uncomfortable,",
+    "words": [
+      {
+        "word": "with",
+        "start": 261.36,
+        "end": 261.6
+      },
+      {
+        "word": "the",
+        "start": 261.6,
+        "end": 261.82
+      },
+      {
+        "word": "sound",
+        "start": 261.82,
+        "end": 262.02
+      },
+      {
+        "word": "off.",
+        "start": 262.02,
+        "end": 262.68
+      },
+      {
+        "word": "Write",
+        "start": 263.2,
+        "end": 263.38
+      },
+      {
+        "word": "down",
+        "start": 263.38,
+        "end": 263.9
+      },
+      {
+        "word": "what",
+        "start": 263.9,
+        "end": 264.16
+      },
+      {
+        "word": "a",
+        "start": 264.16,
+        "end": 264.42
+      },
+      {
+        "word": "stranger",
+        "start": 264.42,
+        "end": 264.64
+      },
+      {
+        "word": "would",
+        "start": 264.64,
+        "end": 264.98
+      },
+      {
+        "word": "guess",
+        "start": 264.98,
+        "end": 265.2
+      },
+      {
+        "word": "you're",
+        "start": 265.2,
+        "end": 265.76
+      },
+      {
+        "word": "feeling.",
+        "start": 265.76,
+        "end": 265.9
+      },
+      {
+        "word": "It's",
+        "start": 266.76,
+        "end": 267.02
+      },
+      {
+        "word": "uncomfortable,",
+        "start": 267.02,
+        "end": 267.42
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "start": 268.32,
+    "end": 273.06,
+    "text": "but it's the fastest way to see the gap between how you feel and how you look.",
+    "words": [
+      {
+        "word": "but",
+        "start": 268.32,
+        "end": 268.5
+      },
+      {
+        "word": "it's",
+        "start": 268.5,
+        "end": 268.78
+      },
+      {
+        "word": "the",
+        "start": 268.78,
+        "end": 268.94
+      },
+      {
+        "word": "fastest",
+        "start": 268.94,
+        "end": 269.28
+      },
+      {
+        "word": "way",
+        "start": 269.28,
+        "end": 269.7
+      },
+      {
+        "word": "to",
+        "start": 269.7,
+        "end": 269.92
+      },
+      {
+        "word": "see",
+        "start": 269.92,
+        "end": 270.04
+      },
+      {
+        "word": "the",
+        "start": 270.04,
+        "end": 270.3
+      },
+      {
+        "word": "gap",
+        "start": 270.3,
+        "end": 270.6
+      },
+      {
+        "word": "between",
+        "start": 270.6,
+        "end": 270.98
+      },
+      {
+        "word": "how",
+        "start": 270.98,
+        "end": 271.26
+      },
+      {
+        "word": "you",
+        "start": 271.26,
+        "end": 271.52
+      },
+      {
+        "word": "feel",
+        "start": 271.52,
+        "end": 271.84
+      },
+      {
+        "word": "and",
+        "start": 271.84,
+        "end": 272.26
+      },
+      {
+        "word": "how",
+        "start": 272.26,
+        "end": 272.38
+      },
+      {
+        "word": "you",
+        "start": 272.38,
+        "end": 272.62
+      },
+      {
+        "word": "look.",
+        "start": 272.62,
+        "end": 273.06
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "start": 274.98,
+    "end": 280.88,
+    "text": "Now here's something that should take pressure off. Research on the illusion of transparency,",
+    "words": [
+      {
+        "word": "Now",
+        "start": 274.98,
+        "end": 275.62
+      },
+      {
+        "word": "here's",
+        "start": 275.62,
+        "end": 276.1
+      },
+      {
+        "word": "something",
+        "start": 276.1,
+        "end": 276.42
+      },
+      {
+        "word": "that",
+        "start": 276.42,
+        "end": 276.62
+      },
+      {
+        "word": "should",
+        "start": 276.62,
+        "end": 276.84
+      },
+      {
+        "word": "take",
+        "start": 276.84,
+        "end": 277.14
+      },
+      {
+        "word": "pressure",
+        "start": 277.14,
+        "end": 277.44
+      },
+      {
+        "word": "off.",
+        "start": 277.44,
+        "end": 278.34
+      },
+      {
+        "word": "Research",
+        "start": 278.94,
+        "end": 279.18
+      },
+      {
+        "word": "on",
+        "start": 279.18,
+        "end": 279.46
+      },
+      {
+        "word": "the",
+        "start": 279.46,
+        "end": 279.64
+      },
+      {
+        "word": "illusion",
+        "start": 279.64,
+        "end": 279.96
+      },
+      {
+        "word": "of",
+        "start": 279.96,
+        "end": 280.28
+      },
+      {
+        "word": "transparency,",
+        "start": 280.28,
+        "end": 280.88
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "start": 281.3,
+    "end": 287.16,
+    "text": "suggests we overestimate how visible our emotions are to others, which means you probably need",
+    "words": [
+      {
+        "word": "suggests",
+        "start": 281.3,
+        "end": 281.64
+      },
+      {
+        "word": "we",
+        "start": 281.64,
+        "end": 282.0
+      },
+      {
+        "word": "overestimate",
+        "start": 282.0,
+        "end": 282.64
+      },
+      {
+        "word": "how",
+        "start": 282.64,
+        "end": 282.92
+      },
+      {
+        "word": "visible",
+        "start": 282.92,
+        "end": 283.36
+      },
+      {
+        "word": "our",
+        "start": 283.36,
+        "end": 283.7
+      },
+      {
+        "word": "emotions",
+        "start": 283.7,
+        "end": 284.08
+      },
+      {
+        "word": "are",
+        "start": 284.08,
+        "end": 284.44
+      },
+      {
+        "word": "to",
+        "start": 284.44,
+        "end": 284.58
+      },
+      {
+        "word": "others,",
+        "start": 284.58,
+        "end": 285.1
+      },
+      {
+        "word": "which",
+        "start": 285.76,
+        "end": 285.94
+      },
+      {
+        "word": "means",
+        "start": 285.94,
+        "end": 286.22
+      },
+      {
+        "word": "you",
+        "start": 286.22,
+        "end": 286.5
+      },
+      {
+        "word": "probably",
+        "start": 286.5,
+        "end": 286.74
+      },
+      {
+        "word": "need",
+        "start": 286.74,
+        "end": 287.16
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "start": 287.16,
+    "end": 293.66,
+    "text": "less control than you think. Most people aren't studying your face. The ones who are,",
+    "words": [
+      {
+        "word": "less",
+        "start": 287.16,
+        "end": 287.46
+      },
+      {
+        "word": "control",
+        "start": 287.46,
+        "end": 287.92
+      },
+      {
+        "word": "than",
+        "start": 287.92,
+        "end": 288.2
+      },
+      {
+        "word": "you",
+        "start": 288.2,
+        "end": 288.38
+      },
+      {
+        "word": "think.",
+        "start": 288.38,
+        "end": 288.92
+      },
+      {
+        "word": "Most",
+        "start": 289.5,
+        "end": 289.72
+      },
+      {
+        "word": "people",
+        "start": 289.72,
+        "end": 290.16
+      },
+      {
+        "word": "aren't",
+        "start": 290.16,
+        "end": 290.6
+      },
+      {
+        "word": "studying",
+        "start": 290.6,
+        "end": 290.92
+      },
+      {
+        "word": "your",
+        "start": 290.92,
+        "end": 291.34
+      },
+      {
+        "word": "face.",
+        "start": 291.34,
+        "end": 291.68
+      },
+      {
+        "word": "The",
+        "start": 292.46,
+        "end": 292.6
+      },
+      {
+        "word": "ones",
+        "start": 292.6,
+        "end": 292.92
+      },
+      {
+        "word": "who",
+        "start": 292.92,
+        "end": 293.26
+      },
+      {
+        "word": "are,",
+        "start": 293.26,
+        "end": 293.66
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "start": 294.2,
+    "end": 301.02,
+    "text": "are the ones who ask the questions. And they will ask. So let's fix that.",
+    "words": [
+      {
+        "word": "are",
+        "start": 294.2,
+        "end": 294.34
+      },
+      {
+        "word": "the",
+        "start": 294.34,
+        "end": 294.48
+      },
+      {
+        "word": "ones",
+        "start": 294.48,
+        "end": 294.82
+      },
+      {
+        "word": "who",
+        "start": 294.82,
+        "end": 295.14
+      },
+      {
+        "word": "ask",
+        "start": 295.14,
+        "end": 295.38
+      },
+      {
+        "word": "the",
+        "start": 295.38,
+        "end": 295.6
+      },
+      {
+        "word": "questions.",
+        "start": 295.6,
+        "end": 296.12
+      },
+      {
+        "word": "And",
+        "start": 298.18,
+        "end": 298.38
+      },
+      {
+        "word": "they",
+        "start": 298.38,
+        "end": 298.56
+      },
+      {
+        "word": "will",
+        "start": 298.56,
+        "end": 298.76
+      },
+      {
+        "word": "ask.",
+        "start": 298.76,
+        "end": 299.06
+      },
+      {
+        "word": "So",
+        "start": 299.7,
+        "end": 300.0
+      },
+      {
+        "word": "let's",
+        "start": 300.0,
+        "end": 300.28
+      },
+      {
+        "word": "fix",
+        "start": 300.28,
+        "end": 300.5
+      },
+      {
+        "word": "that.",
+        "start": 300.5,
+        "end": 301.02
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "start": 302.04,
+    "end": 310.04,
+    "text": "The rule is one calm sentence, no defensiveness, no long explanation. Over-explaining",
+    "words": [
+      {
+        "word": "The",
+        "start": 302.04,
+        "end": 302.8
+      },
+      {
+        "word": "rule",
+        "start": 302.8,
+        "end": 303.1
+      },
+      {
+        "word": "is",
+        "start": 303.1,
+        "end": 303.36
+      },
+      {
+        "word": "one",
+        "start": 303.36,
+        "end": 303.86
+      },
+      {
+        "word": "calm",
+        "start": 303.86,
+        "end": 304.24
+      },
+      {
+        "word": "sentence,",
+        "start": 304.24,
+        "end": 304.76
+      },
+      {
+        "word": "no",
+        "start": 305.6,
+        "end": 305.76
+      },
+      {
+        "word": "defensiveness,",
+        "start": 305.76,
+        "end": 306.5
+      },
+      {
+        "word": "no",
+        "start": 307.06,
+        "end": 307.2
+      },
+      {
+        "word": "long",
+        "start": 307.2,
+        "end": 307.56
+      },
+      {
+        "word": "explanation.",
+        "start": 307.56,
+        "end": 308.32
+      },
+      {
+        "word": "Over",
+        "start": 309.16,
+        "end": 309.46
+      },
+      {
+        "word": "-explaining",
+        "start": 309.46,
+        "end": 310.04
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "start": 310.04,
+    "end": 317.44,
+    "text": "looks like guilt, and it makes the other person more suspicious, not less. If someone asks,",
+    "words": [
+      {
+        "word": "looks",
+        "start": 310.04,
+        "end": 310.36
+      },
+      {
+        "word": "like",
+        "start": 310.36,
+        "end": 310.68
+      },
+      {
+        "word": "guilt,",
+        "start": 310.68,
+        "end": 311.08
+      },
+      {
+        "word": "and",
+        "start": 311.54,
+        "end": 311.6
+      },
+      {
+        "word": "it",
+        "start": 311.6,
+        "end": 311.72
+      },
+      {
+        "word": "makes",
+        "start": 311.72,
+        "end": 311.96
+      },
+      {
+        "word": "the",
+        "start": 311.96,
+        "end": 312.18
+      },
+      {
+        "word": "other",
+        "start": 312.18,
+        "end": 312.38
+      },
+      {
+        "word": "person",
+        "start": 312.38,
+        "end": 312.8
+      },
+      {
+        "word": "more",
+        "start": 312.8,
+        "end": 313.04
+      },
+      {
+        "word": "suspicious,",
+        "start": 313.04,
+        "end": 313.42
+      },
+      {
+        "word": "not",
+        "start": 314.04,
+        "end": 314.16
+      },
+      {
+        "word": "less.",
+        "start": 314.16,
+        "end": 314.56
+      },
+      {
+        "word": "If",
+        "start": 316.32,
+        "end": 316.52
+      },
+      {
+        "word": "someone",
+        "start": 316.52,
+        "end": 316.8
+      },
+      {
+        "word": "asks,",
+        "start": 316.8,
+        "end": 317.44
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "start": 317.98,
+    "end": 326.36,
+    "text": "are you sad? Say, no, I'm good. My face just goes flat when I'm thinking.",
+    "words": [
+      {
+        "word": "are",
+        "start": 317.98,
+        "end": 318.22
+      },
+      {
+        "word": "you",
+        "start": 318.22,
+        "end": 318.46
+      },
+      {
+        "word": "sad?",
+        "start": 318.46,
+        "end": 318.92
+      },
+      {
+        "word": "Say,",
+        "start": 320.2,
+        "end": 320.4
+      },
+      {
+        "word": "no,",
+        "start": 321.32,
+        "end": 321.7
+      },
+      {
+        "word": "I'm",
+        "start": 322.0,
+        "end": 322.36
+      },
+      {
+        "word": "good.",
+        "start": 322.36,
+        "end": 322.74
+      },
+      {
+        "word": "My",
+        "start": 323.7,
+        "end": 323.92
+      },
+      {
+        "word": "face",
+        "start": 323.92,
+        "end": 324.38
+      },
+      {
+        "word": "just",
+        "start": 324.38,
+        "end": 324.78
+      },
+      {
+        "word": "goes",
+        "start": 324.78,
+        "end": 325.02
+      },
+      {
+        "word": "flat",
+        "start": 325.02,
+        "end": 325.42
+      },
+      {
+        "word": "when",
+        "start": 325.42,
+        "end": 325.62
+      },
+      {
+        "word": "I'm",
+        "start": 325.62,
+        "end": 325.84
+      },
+      {
+        "word": "thinking.",
+        "start": 325.84,
+        "end": 326.36
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "start": 327.44,
+    "end": 335.64,
+    "text": "If they ask, are you angry or irritated? Say, not at all. This is just my default face.",
+    "words": [
+      {
+        "word": "If",
+        "start": 327.44,
+        "end": 328.12
+      },
+      {
+        "word": "they",
+        "start": 328.12,
+        "end": 328.48
+      },
+      {
+        "word": "ask,",
+        "start": 328.48,
+        "end": 328.82
+      },
+      {
+        "word": "are",
+        "start": 329.08,
+        "end": 329.22
+      },
+      {
+        "word": "you",
+        "start": 329.22,
+        "end": 329.5
+      },
+      {
+        "word": "angry",
+        "start": 329.5,
+        "end": 329.8
+      },
+      {
+        "word": "or",
+        "start": 329.8,
+        "end": 330.26
+      },
+      {
+        "word": "irritated?",
+        "start": 330.26,
+        "end": 330.68
+      },
+      {
+        "word": "Say,",
+        "start": 331.74,
+        "end": 331.92
+      },
+      {
+        "word": "not",
+        "start": 332.66,
+        "end": 332.86
+      },
+      {
+        "word": "at",
+        "start": 332.86,
+        "end": 333.1
+      },
+      {
+        "word": "all.",
+        "start": 333.1,
+        "end": 333.38
+      },
+      {
+        "word": "This",
+        "start": 333.88,
+        "end": 334.04
+      },
+      {
+        "word": "is",
+        "start": 334.04,
+        "end": 334.24
+      },
+      {
+        "word": "just",
+        "start": 334.24,
+        "end": 334.5
+      },
+      {
+        "word": "my",
+        "start": 334.5,
+        "end": 334.74
+      },
+      {
+        "word": "default",
+        "start": 334.74,
+        "end": 335.08
+      },
+      {
+        "word": "face.",
+        "start": 335.08,
+        "end": 335.64
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "start": 336.3,
+    "end": 345.28,
+    "text": "If I'm annoyed, you'll know. If it, do you not like me? Say, it's not that.",
+    "words": [
+      {
+        "word": "If",
+        "start": 336.3,
+        "end": 336.46
+      },
+      {
+        "word": "I'm",
+        "start": 336.46,
+        "end": 336.72
+      },
+      {
+        "word": "annoyed,",
+        "start": 336.72,
+        "end": 337.06
+      },
+      {
+        "word": "you'll",
+        "start": 338.08,
+        "end": 338.48
+      },
+      {
+        "word": "know.",
+        "start": 338.48,
+        "end": 339.04
+      },
+      {
+        "word": "If",
+        "start": 340.54,
+        "end": 340.8
+      },
+      {
+        "word": "it,",
+        "start": 340.8,
+        "end": 341.16
+      },
+      {
+        "word": "do",
+        "start": 341.38,
+        "end": 341.64
+      },
+      {
+        "word": "you",
+        "start": 341.64,
+        "end": 341.76
+      },
+      {
+        "word": "not",
+        "start": 341.76,
+        "end": 342.02
+      },
+      {
+        "word": "like",
+        "start": 342.02,
+        "end": 342.28
+      },
+      {
+        "word": "me?",
+        "start": 342.28,
+        "end": 343.04
+      },
+      {
+        "word": "Say,",
+        "start": 343.44,
+        "end": 343.72
+      },
+      {
+        "word": "it's",
+        "start": 344.4,
+        "end": 344.7
+      },
+      {
+        "word": "not",
+        "start": 344.7,
+        "end": 344.84
+      },
+      {
+        "word": "that.",
+        "start": 344.84,
+        "end": 345.28
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "start": 346.0,
+    "end": 351.16,
+    "text": "I'm just not very expressive. Honestly, I'm enjoying this.",
+    "words": [
+      {
+        "word": "I'm",
+        "start": 346.0,
+        "end": 346.34
+      },
+      {
+        "word": "just",
+        "start": 346.34,
+        "end": 346.62
+      },
+      {
+        "word": "not",
+        "start": 346.62,
+        "end": 346.96
+      },
+      {
+        "word": "very",
+        "start": 346.96,
+        "end": 347.2
+      },
+      {
+        "word": "expressive.",
+        "start": 347.2,
+        "end": 347.78
+      },
+      {
+        "word": "Honestly,",
+        "start": 348.78,
+        "end": 349.16
+      },
+      {
+        "word": "I'm",
+        "start": 350.18,
+        "end": 350.54
+      },
+      {
+        "word": "enjoying",
+        "start": 350.54,
+        "end": 350.94
+      },
+      {
+        "word": "this.",
+        "start": 350.94,
+        "end": 351.28
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "start": 352.66,
+    "end": 360.24,
+    "text": "If someone calls you cold or a narcissist, say, reserved, not cold, I take time to open up.",
+    "words": [
+      {
+        "word": "If",
+        "start": 352.66,
+        "end": 353.26
+      },
+      {
+        "word": "someone",
+        "start": 353.26,
+        "end": 353.6
+      },
+      {
+        "word": "calls",
+        "start": 353.6,
+        "end": 353.92
+      },
+      {
+        "word": "you",
+        "start": 353.92,
+        "end": 354.22
+      },
+      {
+        "word": "cold",
+        "start": 354.22,
+        "end": 354.5
+      },
+      {
+        "word": "or",
+        "start": 354.5,
+        "end": 354.74
+      },
+      {
+        "word": "a",
+        "start": 354.74,
+        "end": 354.88
+      },
+      {
+        "word": "narcissist,",
+        "start": 354.88,
+        "end": 355.2
+      },
+      {
+        "word": "say,",
+        "start": 356.04,
+        "end": 356.38
+      },
+      {
+        "word": "reserved,",
+        "start": 357.1,
+        "end": 357.46
+      },
+      {
+        "word": "not",
+        "start": 357.92,
+        "end": 358.04
+      },
+      {
+        "word": "cold,",
+        "start": 358.04,
+        "end": 358.46
+      },
+      {
+        "word": "I",
+        "start": 358.96,
+        "end": 359.04
+      },
+      {
+        "word": "take",
+        "start": 359.04,
+        "end": 359.26
+      },
+      {
+        "word": "time",
+        "start": 359.26,
+        "end": 359.66
+      },
+      {
+        "word": "to",
+        "start": 359.66,
+        "end": 359.94
+      },
+      {
+        "word": "open",
+        "start": 359.94,
+        "end": 360.1
+      },
+      {
+        "word": "up.",
+        "start": 360.1,
+        "end": 360.4
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "start": 361.52,
+    "end": 366.68,
+    "text": "Then, back it up with one warm action, like asking them a real question about themselves.",
+    "words": [
+      {
+        "word": "Then,",
+        "start": 361.52,
+        "end": 361.78
+      },
+      {
+        "word": "back",
+        "start": 362.04,
+        "end": 362.1
+      },
+      {
+        "word": "it",
+        "start": 362.1,
+        "end": 362.24
+      },
+      {
+        "word": "up",
+        "start": 362.24,
+        "end": 362.36
+      },
+      {
+        "word": "with",
+        "start": 362.36,
+        "end": 362.54
+      },
+      {
+        "word": "one",
+        "start": 362.54,
+        "end": 362.88
+      },
+      {
+        "word": "warm",
+        "start": 362.88,
+        "end": 363.12
+      },
+      {
+        "word": "action,",
+        "start": 363.12,
+        "end": 363.52
+      },
+      {
+        "word": "like",
+        "start": 364.02,
+        "end": 364.22
+      },
+      {
+        "word": "asking",
+        "start": 364.22,
+        "end": 364.46
+      },
+      {
+        "word": "them",
+        "start": 364.46,
+        "end": 364.78
+      },
+      {
+        "word": "a",
+        "start": 364.78,
+        "end": 364.9
+      },
+      {
+        "word": "real",
+        "start": 364.9,
+        "end": 365.08
+      },
+      {
+        "word": "question",
+        "start": 365.08,
+        "end": 365.54
+      },
+      {
+        "word": "about",
+        "start": 365.54,
+        "end": 365.84
+      },
+      {
+        "word": "themselves.",
+        "start": 365.84,
+        "end": 366.68
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "start": 367.22,
+    "end": 374.94,
+    "text": "Actions beat explanations every time. That's the two second fix I mentioned. Say what your face",
+    "words": [
+      {
+        "word": "Actions",
+        "start": 367.22,
+        "end": 367.66
+      },
+      {
+        "word": "beat",
+        "start": 367.66,
+        "end": 367.96
+      },
+      {
+        "word": "explanations",
+        "start": 367.96,
+        "end": 368.74
+      },
+      {
+        "word": "every",
+        "start": 368.74,
+        "end": 369.3
+      },
+      {
+        "word": "time.",
+        "start": 369.3,
+        "end": 370.2
+      },
+      {
+        "word": "That's",
+        "start": 371.38,
+        "end": 371.68
+      },
+      {
+        "word": "the",
+        "start": 371.68,
+        "end": 371.88
+      },
+      {
+        "word": "two",
+        "start": 371.88,
+        "end": 372.1
+      },
+      {
+        "word": "second",
+        "start": 372.1,
+        "end": 372.44
+      },
+      {
+        "word": "fix",
+        "start": 372.44,
+        "end": 372.74
+      },
+      {
+        "word": "I",
+        "start": 372.74,
+        "end": 372.94
+      },
+      {
+        "word": "mentioned.",
+        "start": 372.94,
+        "end": 373.34
+      },
+      {
+        "word": "Say",
+        "start": 374.04,
+        "end": 374.22
+      },
+      {
+        "word": "what",
+        "start": 374.22,
+        "end": 374.38
+      },
+      {
+        "word": "your",
+        "start": 374.38,
+        "end": 374.64
+      },
+      {
+        "word": "face",
+        "start": 374.64,
+        "end": 374.94
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "start": 374.94,
+    "end": 382.84,
+    "text": "isn't saying. I'm just thinking, or I'm focused, not annoyed. It prevents the wrong story before",
+    "words": [
+      {
+        "word": "isn't",
+        "start": 374.94,
+        "end": 375.4
+      },
+      {
+        "word": "saying.",
+        "start": 375.4,
+        "end": 375.94
+      },
+      {
+        "word": "I'm",
+        "start": 376.72,
+        "end": 376.94
+      },
+      {
+        "word": "just",
+        "start": 376.94,
+        "end": 377.12
+      },
+      {
+        "word": "thinking,",
+        "start": 377.12,
+        "end": 377.52
+      },
+      {
+        "word": "or",
+        "start": 378.32,
+        "end": 378.52
+      },
+      {
+        "word": "I'm",
+        "start": 378.52,
+        "end": 379.08
+      },
+      {
+        "word": "focused,",
+        "start": 379.08,
+        "end": 379.46
+      },
+      {
+        "word": "not",
+        "start": 379.9,
+        "end": 380.02
+      },
+      {
+        "word": "annoyed.",
+        "start": 380.02,
+        "end": 380.4
+      },
+      {
+        "word": "It",
+        "start": 381.22,
+        "end": 381.38
+      },
+      {
+        "word": "prevents",
+        "start": 381.38,
+        "end": 381.68
+      },
+      {
+        "word": "the",
+        "start": 381.68,
+        "end": 381.92
+      },
+      {
+        "word": "wrong",
+        "start": 381.92,
+        "end": 382.18
+      },
+      {
+        "word": "story",
+        "start": 382.18,
+        "end": 382.54
+      },
+      {
+        "word": "before",
+        "start": 382.54,
+        "end": 382.84
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "start": 382.84,
+    "end": 391.12,
+    "text": "it starts. Now the last question. The one people ask when they can't read you at all.",
+    "words": [
+      {
+        "word": "it",
+        "start": 382.84,
+        "end": 383.06
+      },
+      {
+        "word": "starts.",
+        "start": 383.06,
+        "end": 383.5
+      },
+      {
+        "word": "Now",
+        "start": 385.56,
+        "end": 385.78
+      },
+      {
+        "word": "the",
+        "start": 385.78,
+        "end": 386.1
+      },
+      {
+        "word": "last",
+        "start": 386.1,
+        "end": 386.44
+      },
+      {
+        "word": "question.",
+        "start": 386.44,
+        "end": 387.1
+      },
+      {
+        "word": "The",
+        "start": 387.84,
+        "end": 387.96
+      },
+      {
+        "word": "one",
+        "start": 387.96,
+        "end": 388.22
+      },
+      {
+        "word": "people",
+        "start": 388.22,
+        "end": 388.64
+      },
+      {
+        "word": "ask",
+        "start": 388.64,
+        "end": 389.08
+      },
+      {
+        "word": "when",
+        "start": 389.08,
+        "end": 389.3
+      },
+      {
+        "word": "they",
+        "start": 389.3,
+        "end": 389.56
+      },
+      {
+        "word": "can't",
+        "start": 389.56,
+        "end": 389.9
+      },
+      {
+        "word": "read",
+        "start": 389.9,
+        "end": 390.14
+      },
+      {
+        "word": "you",
+        "start": 390.14,
+        "end": 390.36
+      },
+      {
+        "word": "at",
+        "start": 390.36,
+        "end": 390.54
+      },
+      {
+        "word": "all.",
+        "start": 390.54,
+        "end": 391.12
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "start": 391.96,
+    "end": 400.36,
+    "text": "Are you kind or evil? And it's fair, because of face, can't answer that. Neither can",
+    "words": [
+      {
+        "word": "Are",
+        "start": 391.96,
+        "end": 392.1
+      },
+      {
+        "word": "you",
+        "start": 392.1,
+        "end": 392.34
+      },
+      {
+        "word": "kind",
+        "start": 392.34,
+        "end": 392.78
+      },
+      {
+        "word": "or",
+        "start": 392.78,
+        "end": 393.18
+      },
+      {
+        "word": "evil?",
+        "start": 393.18,
+        "end": 393.7
+      },
+      {
+        "word": "And",
+        "start": 395.78,
+        "end": 396.04
+      },
+      {
+        "word": "it's",
+        "start": 396.04,
+        "end": 396.24
+      },
+      {
+        "word": "fair,",
+        "start": 396.24,
+        "end": 396.68
+      },
+      {
+        "word": "because",
+        "start": 397.12,
+        "end": 397.32
+      },
+      {
+        "word": "of",
+        "start": 397.32,
+        "end": 397.6
+      },
+      {
+        "word": "face,",
+        "start": 397.6,
+        "end": 397.98
+      },
+      {
+        "word": "can't",
+        "start": 398.1,
+        "end": 398.4
+      },
+      {
+        "word": "answer",
+        "start": 398.4,
+        "end": 398.7
+      },
+      {
+        "word": "that.",
+        "start": 398.7,
+        "end": 399.46
+      },
+      {
+        "word": "Neither",
+        "start": 399.78,
+        "end": 400.02
+      },
+      {
+        "word": "can",
+        "start": 400.02,
+        "end": 400.36
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "start": 400.36,
+    "end": 409.16,
+    "text": "sense it. So you say, watch what I do, not how I look. Then you make sure your actions match.",
+    "words": [
+      {
+        "word": "sense",
+        "start": 400.36,
+        "end": 400.74
+      },
+      {
+        "word": "it.",
+        "start": 400.74,
+        "end": 401.96
+      },
+      {
+        "word": "So",
+        "start": 401.96,
+        "end": 402.08
+      },
+      {
+        "word": "you",
+        "start": 402.08,
+        "end": 402.36
+      },
+      {
+        "word": "say,",
+        "start": 402.36,
+        "end": 402.92
+      },
+      {
+        "word": "watch",
+        "start": 403.58,
+        "end": 403.76
+      },
+      {
+        "word": "what",
+        "start": 403.76,
+        "end": 403.92
+      },
+      {
+        "word": "I",
+        "start": 403.92,
+        "end": 404.12
+      },
+      {
+        "word": "do,",
+        "start": 404.12,
+        "end": 404.64
+      },
+      {
+        "word": "not",
+        "start": 405.12,
+        "end": 405.24
+      },
+      {
+        "word": "how",
+        "start": 405.24,
+        "end": 405.46
+      },
+      {
+        "word": "I",
+        "start": 405.46,
+        "end": 405.64
+      },
+      {
+        "word": "look.",
+        "start": 405.64,
+        "end": 406.1
+      },
+      {
+        "word": "Then",
+        "start": 406.92,
+        "end": 407.22
+      },
+      {
+        "word": "you",
+        "start": 407.22,
+        "end": 407.52
+      },
+      {
+        "word": "make",
+        "start": 407.52,
+        "end": 407.76
+      },
+      {
+        "word": "sure",
+        "start": 407.76,
+        "end": 408.08
+      },
+      {
+        "word": "your",
+        "start": 408.08,
+        "end": 408.36
+      },
+      {
+        "word": "actions",
+        "start": 408.36,
+        "end": 408.66
+      },
+      {
+        "word": "match.",
+        "start": 408.66,
+        "end": 409.16
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "start": 410.96,
+    "end": 417.28,
+    "text": "Which brings us back to the title. What I got wrong was thinking a poker face means showing nothing.",
+    "words": [
+      {
+        "word": "Which",
+        "start": 410.96,
+        "end": 411.18
+      },
+      {
+        "word": "brings",
+        "start": 411.18,
+        "end": 411.54
+      },
+      {
+        "word": "us",
+        "start": 411.54,
+        "end": 411.84
+      },
+      {
+        "word": "back",
+        "start": 411.84,
+        "end": 412.1
+      },
+      {
+        "word": "to",
+        "start": 412.1,
+        "end": 412.26
+      },
+      {
+        "word": "the",
+        "start": 412.26,
+        "end": 412.4
+      },
+      {
+        "word": "title.",
+        "start": 412.4,
+        "end": 412.74
+      },
+      {
+        "word": "What",
+        "start": 413.62,
+        "end": 413.78
+      },
+      {
+        "word": "I",
+        "start": 413.78,
+        "end": 413.88
+      },
+      {
+        "word": "got",
+        "start": 413.88,
+        "end": 414.16
+      },
+      {
+        "word": "wrong",
+        "start": 414.16,
+        "end": 414.48
+      },
+      {
+        "word": "was",
+        "start": 414.48,
+        "end": 414.82
+      },
+      {
+        "word": "thinking",
+        "start": 414.82,
+        "end": 415.1
+      },
+      {
+        "word": "a",
+        "start": 415.1,
+        "end": 415.42
+      },
+      {
+        "word": "poker",
+        "start": 415.42,
+        "end": 415.64
+      },
+      {
+        "word": "face",
+        "start": 415.64,
+        "end": 416.06
+      },
+      {
+        "word": "means",
+        "start": 416.06,
+        "end": 416.46
+      },
+      {
+        "word": "showing",
+        "start": 416.46,
+        "end": 416.76
+      },
+      {
+        "word": "nothing.",
+        "start": 416.76,
+        "end": 417.28
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "start": 418.3,
+    "end": 423.18,
+    "text": "It doesn't. The real skill is showing exactly what you choose to show.",
+    "words": [
+      {
+        "word": "It",
+        "start": 418.3,
+        "end": 418.38
+      },
+      {
+        "word": "doesn't.",
+        "start": 418.38,
+        "end": 418.84
+      },
+      {
+        "word": "The",
+        "start": 419.68,
+        "end": 419.84
+      },
+      {
+        "word": "real",
+        "start": 419.84,
+        "end": 420.08
+      },
+      {
+        "word": "skill",
+        "start": 420.08,
+        "end": 420.6
+      },
+      {
+        "word": "is",
+        "start": 420.6,
+        "end": 420.9
+      },
+      {
+        "word": "showing",
+        "start": 420.9,
+        "end": 421.2
+      },
+      {
+        "word": "exactly",
+        "start": 421.2,
+        "end": 421.7
+      },
+      {
+        "word": "what",
+        "start": 421.7,
+        "end": 421.94
+      },
+      {
+        "word": "you",
+        "start": 421.94,
+        "end": 422.12
+      },
+      {
+        "word": "choose",
+        "start": 422.12,
+        "end": 422.38
+      },
+      {
+        "word": "to",
+        "start": 422.38,
+        "end": 422.66
+      },
+      {
+        "word": "show.",
+        "start": 422.66,
+        "end": 423.18
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "start": 423.94,
+    "end": 429.6,
+    "text": "Keep the poker face for high stakes moments like conflict, negotiation and provocation.",
+    "words": [
+      {
+        "word": "Keep",
+        "start": 423.94,
+        "end": 424.1
+      },
+      {
+        "word": "the",
+        "start": 424.1,
+        "end": 424.36
+      },
+      {
+        "word": "poker",
+        "start": 424.36,
+        "end": 424.62
+      },
+      {
+        "word": "face",
+        "start": 424.62,
+        "end": 425.0
+      },
+      {
+        "word": "for",
+        "start": 425.0,
+        "end": 425.3
+      },
+      {
+        "word": "high",
+        "start": 425.3,
+        "end": 425.58
+      },
+      {
+        "word": "stakes",
+        "start": 425.58,
+        "end": 425.82
+      },
+      {
+        "word": "moments",
+        "start": 425.82,
+        "end": 426.34
+      },
+      {
+        "word": "like",
+        "start": 426.34,
+        "end": 426.9
+      },
+      {
+        "word": "conflict,",
+        "start": 426.9,
+        "end": 427.28
+      },
+      {
+        "word": "negotiation",
+        "start": 427.6,
+        "end": 428.12
+      },
+      {
+        "word": "and",
+        "start": 428.12,
+        "end": 428.9
+      },
+      {
+        "word": "provocation.",
+        "start": 428.9,
+        "end": 429.6
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "start": 430.36,
+    "end": 439.22,
+    "text": "Drop it everywhere else. Try one thing this week, record one conversation, watch it silently,",
+    "words": [
+      {
+        "word": "Drop",
+        "start": 430.36,
+        "end": 430.54
+      },
+      {
+        "word": "it",
+        "start": 430.54,
+        "end": 430.8
+      },
+      {
+        "word": "everywhere",
+        "start": 430.8,
+        "end": 431.1
+      },
+      {
+        "word": "else.",
+        "start": 431.1,
+        "end": 432.5
+      },
+      {
+        "word": "Try",
+        "start": 433.74,
+        "end": 433.94
+      },
+      {
+        "word": "one",
+        "start": 433.94,
+        "end": 434.4
+      },
+      {
+        "word": "thing",
+        "start": 434.4,
+        "end": 434.62
+      },
+      {
+        "word": "this",
+        "start": 434.62,
+        "end": 434.92
+      },
+      {
+        "word": "week,",
+        "start": 434.92,
+        "end": 435.46
+      },
+      {
+        "word": "record",
+        "start": 436.2,
+        "end": 436.46
+      },
+      {
+        "word": "one",
+        "start": 436.46,
+        "end": 437.0
+      },
+      {
+        "word": "conversation,",
+        "start": 437.0,
+        "end": 437.68
+      },
+      {
+        "word": "watch",
+        "start": 438.42,
+        "end": 438.54
+      },
+      {
+        "word": "it",
+        "start": 438.54,
+        "end": 438.86
+      },
+      {
+        "word": "silently,",
+        "start": 438.86,
+        "end": 439.22
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "start": 440.1,
+    "end": 446.94,
+    "text": "and write down what a stranger would guess. That single note will teach you more than any technique",
+    "words": [
+      {
+        "word": "and",
+        "start": 440.1,
+        "end": 440.28
+      },
+      {
+        "word": "write",
+        "start": 440.28,
+        "end": 440.46
+      },
+      {
+        "word": "down",
+        "start": 440.46,
+        "end": 440.98
+      },
+      {
+        "word": "what",
+        "start": 440.98,
+        "end": 441.24
+      },
+      {
+        "word": "a",
+        "start": 441.24,
+        "end": 441.46
+      },
+      {
+        "word": "stranger",
+        "start": 441.46,
+        "end": 441.78
+      },
+      {
+        "word": "would",
+        "start": 441.78,
+        "end": 442.1
+      },
+      {
+        "word": "guess.",
+        "start": 442.1,
+        "end": 442.66
+      },
+      {
+        "word": "That",
+        "start": 443.48,
+        "end": 443.8
+      },
+      {
+        "word": "single",
+        "start": 443.8,
+        "end": 444.24
+      },
+      {
+        "word": "note",
+        "start": 444.24,
+        "end": 444.64
+      },
+      {
+        "word": "will",
+        "start": 444.64,
+        "end": 445.0
+      },
+      {
+        "word": "teach",
+        "start": 445.0,
+        "end": 445.26
+      },
+      {
+        "word": "you",
+        "start": 445.26,
+        "end": 445.52
+      },
+      {
+        "word": "more",
+        "start": 445.52,
+        "end": 445.9
+      },
+      {
+        "word": "than",
+        "start": 445.9,
+        "end": 446.3
+      },
+      {
+        "word": "any",
+        "start": 446.3,
+        "end": 446.56
+      },
+      {
+        "word": "technique",
+        "start": 446.56,
+        "end": 446.94
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "start": 446.94,
+    "end": 448.22,
+    "text": "I gave you today.",
+    "words": [
+      {
+        "word": "I",
+        "start": 446.94,
+        "end": 447.38
+      },
+      {
+        "word": "gave",
+        "start": 447.38,
+        "end": 447.64
+      },
+      {
+        "word": "you",
+        "start": 447.64,
+        "end": 447.86
+      },
+      {
+        "word": "today.",
+        "start": 447.86,
+        "end": 448.22
+      }
+    ]
+  }
+];

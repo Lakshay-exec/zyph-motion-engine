@@ -1,0 +1,32 @@
+{
+  "name": "zyph-motion-engine",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Zyph Automated Motion-Graphics Engine (GitHub Cloud-Render Edition)",
+  "type": "module",
+  "scripts": {
+    "start": "remotion preview src/index.ts",
+    "build": "remotion bundle src/index.ts",
+    "prep:assets": "tsx scripts/prep_assets.ts",
+    "generate:sfx": "tsx scripts/generate_sfx.ts",
+    "render:short": "remotion render PokerFaceShort out/poker-face-short.mp4",
+    "render:long": "remotion render PokerFaceLong out/poker-face-long.mp4",
+    "render:thumb": "remotion still PokerFaceThumb out/poker-face-thumb.png"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.260",
+    "@remotion/media-utils": "^4.0.260",
+    "dotenv": "^16.4.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "^4.0.260",
+    "sharp": "^0.33.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.10",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
