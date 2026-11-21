@@ -115,7 +115,7 @@ export const ZyphStage: React.FC<ZyphStageProps> = ({
           }}
         />
 
-        {/* Zyph Mannequin - Multiply blend over pure white */}
+        {/* Zyph Mannequin - True Transparent Alpha Cutout */}
         <Img
           src={imageSrc}
           alt="Zyph Mannequin"
@@ -124,7 +124,6 @@ export const ZyphStage: React.FC<ZyphStageProps> = ({
             maxHeight: "100%",
             maxWidth: "100%",
             objectFit: "contain",
-            mixBlendMode: "multiply",
             zIndex: 2,
             filter: "contrast(1.04) brightness(0.99)",
           }}
