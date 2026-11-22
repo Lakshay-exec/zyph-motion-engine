@@ -5,9 +5,10 @@ import { WordTimestamp } from "../types";
 
 interface CaptionsProps {
   words: WordTimestamp[];
-  audioStartTime?: number; // offset in seconds if audio has offset
-  bottomOffset?: string;
+  bottomOffset?: string | number;
   maxWordsPerChunk?: number;
+  fontSize?: number;
+  activeColor?: string;
 }
 
 interface Chunk {
@@ -18,8 +19,10 @@ interface Chunk {
 
 export const Captions: React.FC<CaptionsProps> = ({
   words,
-  bottomOffset = "18%",
+  bottomOffset = "16%",
   maxWordsPerChunk = 4,
+  fontSize = 44,
+  activeColor = "#00C853",
 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
@@ -69,7 +72,7 @@ export const Captions: React.FC<CaptionsProps> = ({
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        zIndex: 50,
+        zIndex: 52,
         pointerEvents: "none",
         padding: "0 40px",
       }}
@@ -79,10 +82,16 @@ export const Captions: React.FC<CaptionsProps> = ({
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "center",
-          gap: "10px 14px",
-          transform: `scale(${0.9 + 0.1 * pop})`,
+          gap: "8px 12px",
+          transform: `scale(${0.92 + 0.08 * pop})`,
           transformOrigin: "center center",
-          maxWidth: "900px",
+          maxWidth: "960px",
+          backgroundColor: "rgba(255, 255, 255, 0.92)",
+          backdropFilter: "blur(12px)",
+          padding: "10px 22px",
+          borderRadius: "14px",
+          border: "1px solid rgba(0, 0, 0, 0.08)",
+          boxShadow: "0 10px 30px rgba(0, 0, 0, 0.06)",
         }}
       >
         {activeChunk.words.map((w, idx) => {
@@ -94,22 +103,22 @@ export const Captions: React.FC<CaptionsProps> = ({
               key={`${w.word}-${idx}`}
               style={{
                 fontFamily: FONTS.sans,
-                fontSize: "44px",
+                fontSize: `${fontSize}px`,
                 fontWeight: 900,
                 letterSpacing: "-0.03em",
                 textTransform: "uppercase",
-                padding: "4px 14px",
-                borderRadius: "8px",
-                backgroundColor: isActive ? COLORS.darkPill : "transparent",
+                padding: "2px 8px",
+                borderRadius: "6px",
+                backgroundColor: isActive ? "#0A0A0A" : "transparent",
                 color: isActive
-                  ? COLORS.darkPillText
+                  ? activeColor
                   : isPassed
                   ? COLORS.fg
                   : "rgba(10, 10, 10, 0.35)",
-                transform: isActive ? "scale(1.05)" : "scale(1.0)",
-                transition: "all 0.08s ease",
+                transform: isActive ? "scale(1.08)" : "scale(1.0)",
+                transition: "all 0.06s ease",
                 boxShadow: isActive
-                  ? "0 8px 24px rgba(0, 0, 0, 0.22)"
+                  ? "0 4px 14px rgba(0, 0, 0, 0.2)"
                   : "none",
                 display: "inline-block",
               }}

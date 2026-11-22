@@ -1,22 +1,32 @@
 import React from "react";
 import { Audio, Sequence, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
+import { AudioVisualizer } from "../components/AudioVisualizer";
 import { CameraHUD } from "../components/CameraHUD";
+import { Captions } from "../components/Captions";
+import { ChapterTitleSlam } from "../components/ChapterTitleSlam";
 import { CountdownCircle } from "../components/CountdownCircle";
 import { EditorialText } from "../components/EditorialText";
+import { FilmGrainOverlay } from "../components/FilmGrainOverlay";
 import { FloatingCard } from "../components/FloatingCard";
 import { GlitchSlice } from "../components/GlitchSlice";
 import { MetricMeter } from "../components/MetricMeter";
 import { PulseGraph } from "../components/PulseGraph";
 import { ScannerReticle } from "../components/ScannerReticle";
 import { SoundEffects } from "../components/SoundEffects";
+import { TimelineSlider } from "../components/TimelineSlider";
 import { ZyphStage } from "../components/ZyphStage";
 import { COLORS, FONTS } from "../constants";
+import { TRANSCRIPT_SEGMENTS } from "../data/scriptData";
 import { SoundCue } from "../types";
 
 export const PokerFaceLong: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps, durationInFrames } = useVideoConfig(); // 60 FPS
   const currentSec = frame / fps;
+
+  const allWords = React.useMemo(() => {
+    return TRANSCRIPT_SEGMENTS.flatMap((s) => s.words);
+  }, []);
 
   // Sound cues orchestrated across all major chapters and punch transitions
   const sfxCues: SoundCue[] = [
@@ -26,27 +36,27 @@ export const PokerFaceLong: React.FC = () => {
     { frame: 18 * fps, src: "sfx/thump.wav", volume: 0.85 },
     { frame: 18 * fps + 8, src: "sfx/glitch.wav", volume: 0.6 },
     { frame: 24 * fps, src: "sfx/pop.wav", volume: 0.7 },
-    { frame: 36 * fps, src: "sfx/thump.wav", volume: 0.85 },
+    { frame: 36 * fps, src: "sfx/thump.wav", volume: 0.9 },
     { frame: 38 * fps, src: "sfx/ping.wav", volume: 0.7 },
     { frame: 47 * fps, src: "sfx/whoosh.wav", volume: 0.6 },
-    { frame: 75 * fps, src: "sfx/thump.wav", volume: 0.85 },
+    { frame: 75 * fps, src: "sfx/thump.wav", volume: 0.9 },
     { frame: 80 * fps, src: "sfx/whoosh.wav", volume: 0.5 },
     { frame: 92 * fps, src: "sfx/pop.wav", volume: 0.6 },
     { frame: 115 * fps, src: "sfx/shutter.wav", volume: 0.7 },
-    { frame: 150 * fps, src: "sfx/thump.wav", volume: 0.85 },
+    { frame: 150 * fps, src: "sfx/thump.wav", volume: 0.9 },
     { frame: 155 * fps, src: "sfx/ping.wav", volume: 0.6 },
     { frame: 185 * fps, src: "sfx/whoosh.wav", volume: 0.6 },
     { frame: 215 * fps, src: "sfx/pop.wav", volume: 0.6 },
-    { frame: 238 * fps, src: "sfx/thump.wav", volume: 0.85 },
+    { frame: 238 * fps, src: "sfx/thump.wav", volume: 0.9 },
     { frame: 242 * fps, src: "sfx/shutter.wav", volume: 0.6 },
     { frame: 270 * fps, src: "sfx/whoosh.wav", volume: 0.6 },
-    { frame: 301 * fps, src: "sfx/thump.wav", volume: 0.85 },
+    { frame: 301 * fps, src: "sfx/thump.wav", volume: 0.9 },
     { frame: 305 * fps, src: "sfx/pop.wav", volume: 0.6 },
     { frame: 325 * fps, src: "sfx/whoosh.wav", volume: 0.5 },
     { frame: 345 * fps, src: "sfx/ping.wav", volume: 0.6 },
-    { frame: 391 * fps, src: "sfx/thump.wav", volume: 0.9 },
+    { frame: 391 * fps, src: "sfx/thump.wav", volume: 0.95 },
     { frame: 391 * fps + 6, src: "sfx/glitch.wav", volume: 0.7 },
-    { frame: 410 * fps, src: "sfx/thump.wav", volume: 0.85 },
+    { frame: 410 * fps, src: "sfx/thump.wav", volume: 0.9 },
     { frame: 412 * fps, src: "sfx/ping.wav", volume: 0.6 },
   ];
 
@@ -77,10 +87,13 @@ export const PokerFaceLong: React.FC = () => {
       <Audio src={staticFile("audio/voiceover.mp3")} startFrom={0} />
       <SoundEffects cues={sfxCues} />
 
-      {/* 2. Cinematic Camera HUD (Technical Grid, REC, 60fps, Corner Crosshairs) */}
+      {/* 2. Film Grain & Cinematic Organic Texture Overlay */}
+      <FilmGrainOverlay />
+
+      {/* 3. Cinematic Camera HUD (Technical Grid, REC, 60fps, Corner Crosshairs) */}
       <CameraHUD label="COGNITIVE TELEMETRY: ENGAGED" showRec />
 
-      {/* 3. Persistent Emotional Stability Pulse Graph (ECG Waveform) */}
+      {/* 4. Persistent Emotional Stability Pulse Graph (ECG Waveform) */}
       <PulseGraph
         bpm={62}
         label="VAGAL TONE: REGULATED"
@@ -89,7 +102,7 @@ export const PokerFaceLong: React.FC = () => {
         left="260px"
       />
 
-      {/* 4. Top-Left Chapter Header Bar */}
+      {/* 5. Top-Left Chapter Header Bar */}
       <div
         style={{
           position: "absolute",
@@ -123,7 +136,7 @@ export const PokerFaceLong: React.FC = () => {
         </span>
       </div>
 
-      {/* 5. Bottom-Left Minimalist Progress Indicator */}
+      {/* 6. Bottom-Left Minimalist Progress Indicator */}
       <div
         style={{
           position: "absolute",
@@ -165,7 +178,16 @@ export const PokerFaceLong: React.FC = () => {
         </span>
       </div>
 
-      {/* 6. Interactive Skip Ahead Countdown Circle (38s to 58s) */}
+      {/* 7. Chapter Title Transition Slams */}
+      <ChapterTitleSlam number="02" title="THE SHORT VERSION" startFrame={36 * fps} durationInFrames={65} />
+      <ChapterTitleSlam number="03" title="THE PROBLEM" subtitle="PERCEPTION GAP" startFrame={75 * fps} durationInFrames={65} />
+      <ChapterTitleSlam number="04" title="THE SIGNALS" subtitle="CONTROLLED CUES" startFrame={150 * fps} durationInFrames={65} />
+      <ChapterTitleSlam number="05" title="STABILITY" subtitle="VAGAL REGULATION" startFrame={238 * fps} durationInFrames={65} />
+      <ChapterTitleSlam number="06" title="THE RESPONSES" subtitle="ONE CALM SENTENCE" startFrame={301 * fps} durationInFrames={65} />
+      <ChapterTitleSlam number="07" title="THE QUESTION" subtitle="KIND OR EVIL?" startFrame={391 * fps} durationInFrames={65} />
+      <ChapterTitleSlam number="08" title="THE CONCLUSION" subtitle="SELECTIVE MASTERY" startFrame={410 * fps} durationInFrames={65} />
+
+      {/* 8. Interactive Skip Ahead Countdown Circle (38s to 58s) */}
       <CountdownCircle startFrame={38 * fps} durationInFrames={20 * fps} initialSeconds={20} />
 
       {/* ========================================================================= */}
@@ -188,7 +210,6 @@ export const PokerFaceLong: React.FC = () => {
             left="80px"
           />
 
-          {/* Scanner Reticle targeting Zyph's Face */}
           <ScannerReticle
             top="20%"
             right="220px"
@@ -586,6 +607,10 @@ export const PokerFaceLong: React.FC = () => {
             top="36%"
             left="80px"
           />
+
+          {/* Audio Visualizer Spectrum when discussing tone */}
+          <AudioVisualizer bottom="42px" right="80px" numBars={24} />
+
           <ZyphStage
             imageSrc={staticFile("zyph/zyph_16.png")}
             align="right"
@@ -690,14 +715,8 @@ export const PokerFaceLong: React.FC = () => {
             left="80px"
           />
 
-          <MetricMeter
-            label="BREVITY INDEX"
-            value={98}
-            startFrame={304 * fps}
-            top="180px"
-            left="80px"
-            color="#00C853"
-          />
+          {/* Interactive 3-Second Cognitive Pause Slider */}
+          <TimelineSlider startFrame={304 * fps} durationInFrames={18 * fps} top="180px" left="80px" />
 
           <ZyphStage
             imageSrc={staticFile("zyph/zyph_11.png")}
@@ -862,6 +881,9 @@ export const PokerFaceLong: React.FC = () => {
           />
         </>
       )}
+
+      {/* 9. Minimalist Editorial Subtitles Bar */}
+      <Captions words={allWords} bottomOffset="42px" fontSize={18} activeColor="#00C853" maxWordsPerChunk={6} />
     </div>
   );
 };

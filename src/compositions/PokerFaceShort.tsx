@@ -1,6 +1,8 @@
 import React from "react";
 import { Audio, interpolate, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { CameraHUD } from "../components/CameraHUD";
+import { Captions } from "../components/Captions";
+import { FilmGrainOverlay } from "../components/FilmGrainOverlay";
 import { FloatingCard } from "../components/FloatingCard";
 import { GlitchSlice } from "../components/GlitchSlice";
 import { MetricMeter } from "../components/MetricMeter";
@@ -8,12 +10,17 @@ import { ScannerReticle } from "../components/ScannerReticle";
 import { SoundEffects } from "../components/SoundEffects";
 import { ZyphStage } from "../components/ZyphStage";
 import { COLORS, FONTS } from "../constants";
+import { TRANSCRIPT_SEGMENTS } from "../data/scriptData";
 import { SoundCue } from "../types";
 
 export const PokerFaceShort: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig(); // 60 FPS
   const currentSec = frame / fps;
+
+  const allWords = React.useMemo(() => {
+    return TRANSCRIPT_SEGMENTS.flatMap((s) => s.words);
+  }, []);
 
   const sfxCues: SoundCue[] = [
     { frame: 0, src: "sfx/thump.wav", volume: 0.8 },
@@ -42,10 +49,13 @@ export const PokerFaceShort: React.FC = () => {
       <Audio src={staticFile("audio/voiceover.mp3")} startFrom={0} />
       <SoundEffects cues={sfxCues} />
 
-      {/* 2. Technical Camera HUD Overlay (Crosshairs, Grid, REC, Timecode) */}
+      {/* 2. Film Grain & Ambient Texture Overlay */}
+      <FilmGrainOverlay />
+
+      {/* 3. Technical Camera HUD Overlay (Crosshairs, Grid, REC, Timecode) */}
       <CameraHUD label="VERTICAL METRICS: ACTIVE" showRec />
 
-      {/* 3. Top Editorial Header */}
+      {/* 4. Top Editorial Header */}
       <div
         style={{
           position: "absolute",
@@ -94,7 +104,7 @@ export const PokerFaceShort: React.FC = () => {
         </span>
       </div>
 
-      {/* 4. Dynamic Kinetic Scenes */}
+      {/* 5. Dynamic Kinetic Scenes */}
 
       {/* Scene 1: 0 - 6s ("I spent years building the perfect poker face.") */}
       {currentSec < 6 && (
@@ -360,7 +370,10 @@ export const PokerFaceShort: React.FC = () => {
         </>
       )}
 
-      {/* Bottom Progress Line */}
+      {/* 6. Kinetic Word-by-Word Whisper Retention Captions */}
+      <Captions words={allWords} bottomOffset="15%" fontSize={46} activeColor="#00C853" />
+
+      {/* 7. Bottom Progress Line */}
       <div
         style={{
           position: "absolute",
