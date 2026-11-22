@@ -1,26 +1,56 @@
 import React from "react";
 import { Audio, Sequence, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
+import { CameraHUD } from "../components/CameraHUD";
 import { CountdownCircle } from "../components/CountdownCircle";
 import { EditorialText } from "../components/EditorialText";
+import { FloatingCard } from "../components/FloatingCard";
 import { GlitchSlice } from "../components/GlitchSlice";
+import { MetricMeter } from "../components/MetricMeter";
+import { PulseGraph } from "../components/PulseGraph";
+import { ScannerReticle } from "../components/ScannerReticle";
+import { SoundEffects } from "../components/SoundEffects";
 import { ZyphStage } from "../components/ZyphStage";
 import { COLORS, FONTS } from "../constants";
+import { SoundCue } from "../types";
 
 export const PokerFaceLong: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps, durationInFrames } = useVideoConfig(); // 60 FPS
   const currentSec = frame / fps;
 
-  // Chapter boundaries in seconds:
-  // 01: 0 - 36s (The Mistake)
-  // 02: 36 - 75s (The Short Version)
-  // 03: 75 - 150s (The Gap / Problem)
-  // 04: 150 - 238s (The Fix)
-  // 05: 238 - 301s (Stability)
-  // 06: 301 - 391s (The 1-Sentence Scripts)
-  // 07: 391 - 410s (Kind or Evil?)
-  // 08: 410 - 449s (Selective Control)
+  // Sound cues orchestrated across all major chapters and punch transitions
+  const sfxCues: SoundCue[] = [
+    { frame: 0, src: "sfx/thump.wav", volume: 0.8 },
+    { frame: 20, src: "sfx/whoosh.wav", volume: 0.5 },
+    { frame: 15 * fps, src: "sfx/whoosh.wav", volume: 0.6 },
+    { frame: 18 * fps, src: "sfx/thump.wav", volume: 0.85 },
+    { frame: 18 * fps + 8, src: "sfx/glitch.wav", volume: 0.6 },
+    { frame: 24 * fps, src: "sfx/pop.wav", volume: 0.7 },
+    { frame: 36 * fps, src: "sfx/thump.wav", volume: 0.85 },
+    { frame: 38 * fps, src: "sfx/ping.wav", volume: 0.7 },
+    { frame: 47 * fps, src: "sfx/whoosh.wav", volume: 0.6 },
+    { frame: 75 * fps, src: "sfx/thump.wav", volume: 0.85 },
+    { frame: 80 * fps, src: "sfx/whoosh.wav", volume: 0.5 },
+    { frame: 92 * fps, src: "sfx/pop.wav", volume: 0.6 },
+    { frame: 115 * fps, src: "sfx/shutter.wav", volume: 0.7 },
+    { frame: 150 * fps, src: "sfx/thump.wav", volume: 0.85 },
+    { frame: 155 * fps, src: "sfx/ping.wav", volume: 0.6 },
+    { frame: 185 * fps, src: "sfx/whoosh.wav", volume: 0.6 },
+    { frame: 215 * fps, src: "sfx/pop.wav", volume: 0.6 },
+    { frame: 238 * fps, src: "sfx/thump.wav", volume: 0.85 },
+    { frame: 242 * fps, src: "sfx/shutter.wav", volume: 0.6 },
+    { frame: 270 * fps, src: "sfx/whoosh.wav", volume: 0.6 },
+    { frame: 301 * fps, src: "sfx/thump.wav", volume: 0.85 },
+    { frame: 305 * fps, src: "sfx/pop.wav", volume: 0.6 },
+    { frame: 325 * fps, src: "sfx/whoosh.wav", volume: 0.5 },
+    { frame: 345 * fps, src: "sfx/ping.wav", volume: 0.6 },
+    { frame: 391 * fps, src: "sfx/thump.wav", volume: 0.9 },
+    { frame: 391 * fps + 6, src: "sfx/glitch.wav", volume: 0.7 },
+    { frame: 410 * fps, src: "sfx/thump.wav", volume: 0.85 },
+    { frame: 412 * fps, src: "sfx/ping.wav", volume: 0.6 },
+  ];
 
+  // Chapter boundaries in seconds:
   let chapterName = "— 01 · THE MISTAKE";
   if (currentSec >= 36 && currentSec < 75) chapterName = "— 02 · THE SHORT VERSION";
   else if (currentSec >= 75 && currentSec < 150) chapterName = "— 03 · THE PROBLEM";
@@ -43,10 +73,23 @@ export const PokerFaceLong: React.FC = () => {
         overflow: "hidden",
       }}
     >
-      {/* 1. Full Master Voiceover Track */}
+      {/* 1. Full Master Voiceover Track & Rich SFX Engine */}
       <Audio src={staticFile("audio/voiceover.mp3")} startFrom={0} />
+      <SoundEffects cues={sfxCues} />
 
-      {/* 2. Top-Left Chapter Header Bar */}
+      {/* 2. Cinematic Camera HUD (Technical Grid, REC, 60fps, Corner Crosshairs) */}
+      <CameraHUD label="COGNITIVE TELEMETRY: ENGAGED" showRec />
+
+      {/* 3. Persistent Emotional Stability Pulse Graph (ECG Waveform) */}
+      <PulseGraph
+        bpm={62}
+        label="VAGAL TONE: REGULATED"
+        stressLevel="12% [OPTIMAL]"
+        bottom="36px"
+        left="260px"
+      />
+
+      {/* 4. Top-Left Chapter Header Bar */}
       <div
         style={{
           position: "absolute",
@@ -80,7 +123,7 @@ export const PokerFaceLong: React.FC = () => {
         </span>
       </div>
 
-      {/* 3. Bottom-Left Minimalist Progress Indicator */}
+      {/* 5. Bottom-Left Minimalist Progress Indicator */}
       <div
         style={{
           position: "absolute",
@@ -122,7 +165,7 @@ export const PokerFaceLong: React.FC = () => {
         </span>
       </div>
 
-      {/* 4. Interactive Skip Ahead Countdown Circle (38s to 58s) */}
+      {/* 6. Interactive Skip Ahead Countdown Circle (38s to 58s) */}
       <CountdownCircle startFrame={38 * fps} durationInFrames={20 * fps} initialSeconds={20} />
 
       {/* ========================================================================= */}
@@ -144,11 +187,25 @@ export const PokerFaceLong: React.FC = () => {
             top="36%"
             left="80px"
           />
+
+          {/* Scanner Reticle targeting Zyph's Face */}
+          <ScannerReticle
+            top="20%"
+            right="220px"
+            width={340}
+            height={380}
+            targetLabel="SUB-EXPRESSION SCAN"
+            probability="NEUTRAL: 98.4%"
+            statusText="FACIAL TONE: LOCKED"
+            startFrame={30}
+          />
+
           <ZyphStage
             imageSrc={staticFile("zyph/zyph_11.png")}
             align="right"
+            zoomScale={1.22}
+            heightPercent={100}
             zoomDirection="subtle-in"
-            heightPercent={92}
           />
         </>
       )}
@@ -167,11 +224,22 @@ export const PokerFaceLong: React.FC = () => {
             top="36%"
             left="80px"
           />
+
+          <MetricMeter
+            label="PERCEPTION GAP"
+            value={86}
+            startFrame={11 * fps}
+            top="180px"
+            left="80px"
+            color="#E53935"
+          />
+
           <ZyphStage
             imageSrc={staticFile("zyph/zyph_18.png")}
             align="right"
+            zoomScale={1.22}
+            heightPercent={100}
             zoomDirection="subtle-in"
-            heightPercent={90}
             entranceFrame={11 * fps}
           />
         </>
@@ -194,8 +262,9 @@ export const PokerFaceLong: React.FC = () => {
           <ZyphStage
             imageSrc={staticFile("zyph/zyph_1.png")}
             align="right"
+            zoomScale={1.24}
+            heightPercent={100}
             zoomDirection="subtle-in"
-            heightPercent={90}
             entranceFrame={15 * fps}
           />
         </>
@@ -211,11 +280,23 @@ export const PokerFaceLong: React.FC = () => {
             top="34%"
             left="80px"
           />
+
+          <FloatingCard
+            tag="ASSUMPTION"
+            title="THE HOSTILITY BIAS"
+            description="When human faces lack feedback, our brains assume danger."
+            startFrame={19 * fps}
+            durationInFrames={5 * fps}
+            top="180px"
+            right="80px"
+          />
+
           <ZyphStage
             imageSrc={staticFile("zyph/zyph_2.png")}
             align="right"
+            zoomScale={1.25}
+            heightPercent={100}
             zoomDirection="subtle-in"
-            heightPercent={92}
             entranceFrame={18 * fps}
           />
         </>
@@ -227,8 +308,9 @@ export const PokerFaceLong: React.FC = () => {
           <ZyphStage
             imageSrc={staticFile("zyph/zyph_13.png")}
             align="left"
+            zoomScale={1.22}
+            heightPercent={100}
             zoomDirection="subtle-in"
-            heightPercent={92}
             entranceFrame={24 * fps}
           />
           <EditorialText
@@ -242,6 +324,16 @@ export const PokerFaceLong: React.FC = () => {
             top="34%"
             left="960px"
             maxWidth="850px"
+          />
+
+          <FloatingCard
+            tag="DISCIPLINE"
+            title="SELECTIVE CONTROL"
+            description="Engineered expression over blank suppression."
+            startFrame={26 * fps}
+            durationInFrames={9 * fps}
+            top="540px"
+            left="960px"
           />
         </>
       )}
@@ -266,8 +358,9 @@ export const PokerFaceLong: React.FC = () => {
           <ZyphStage
             imageSrc={staticFile("zyph/zyph_14.png")}
             align="right"
+            zoomScale={1.22}
+            heightPercent={100}
             zoomDirection="subtle-in"
-            heightPercent={92}
             entranceFrame={36 * fps}
           />
         </>
@@ -286,11 +379,22 @@ export const PokerFaceLong: React.FC = () => {
             top="36%"
             left="80px"
           />
+
+          <MetricMeter
+            label="REACTIVE INHIBITION"
+            value={96}
+            startFrame={50 * fps}
+            top="180px"
+            left="80px"
+            color="#00C853"
+          />
+
           <ZyphStage
             imageSrc={staticFile("zyph/zyph_11.png")}
             align="right"
+            zoomScale={1.22}
+            heightPercent={100}
             zoomDirection="subtle-in"
-            heightPercent={92}
             entranceFrame={47 * fps}
           />
         </>
@@ -313,11 +417,23 @@ export const PokerFaceLong: React.FC = () => {
             top="36%"
             left="80px"
           />
+
+          <FloatingCard
+            tag="THE SCENARIO"
+            title="THE BOARDROOM TEST"
+            description="High stakes meetings amplify micro-signal sensitivity."
+            startFrame={78 * fps}
+            durationInFrames={12 * fps}
+            top="180px"
+            right="80px"
+          />
+
           <ZyphStage
             imageSrc={staticFile("zyph/zyph_3.png")}
             align="right"
+            zoomScale={1.20}
+            heightPercent={96}
             zoomDirection="subtle-in"
-            heightPercent={88}
             entranceFrame={75 * fps}
           />
         </>
@@ -339,8 +455,9 @@ export const PokerFaceLong: React.FC = () => {
           <ZyphStage
             imageSrc={staticFile("zyph/zyph_20.png")}
             align="right"
+            zoomScale={1.22}
+            heightPercent={98}
             zoomDirection="subtle-in"
-            heightPercent={88}
             entranceFrame={92 * fps}
           />
         </>
@@ -360,11 +477,24 @@ export const PokerFaceLong: React.FC = () => {
             top="36%"
             left="80px"
           />
+
+          <ScannerReticle
+            top="22%"
+            right="220px"
+            width={340}
+            height={380}
+            targetLabel="PROJECTION SCAN"
+            probability="INSECURITY: DETECTED"
+            statusText="THE VOID CREATES SUSPICION"
+            startFrame={116 * fps}
+          />
+
           <ZyphStage
             imageSrc={staticFile("zyph/zyph_8.png")}
             align="right"
+            zoomScale={1.22}
+            heightPercent={100}
             zoomDirection="subtle-in"
-            heightPercent={92}
             entranceFrame={115 * fps}
           />
         </>
@@ -387,11 +517,22 @@ export const PokerFaceLong: React.FC = () => {
             top="36%"
             left="80px"
           />
+
+          <MetricMeter
+            label="CONTROLLED CUES"
+            value={92}
+            startFrame={153 * fps}
+            top="180px"
+            left="80px"
+            color="#00C853"
+          />
+
           <ZyphStage
             imageSrc={staticFile("zyph/zyph_4.png")}
             align="right"
+            zoomScale={1.22}
+            heightPercent={100}
             zoomDirection="subtle-in"
-            heightPercent={92}
             entranceFrame={150 * fps}
           />
         </>
@@ -410,11 +551,23 @@ export const PokerFaceLong: React.FC = () => {
             top="36%"
             left="80px"
           />
+
+          <FloatingCard
+            tag="MICRO-SIGNAL"
+            title="THE BROW RAISE"
+            description="Confirms listening without revealing strategic commitment."
+            startFrame={188 * fps}
+            durationInFrames={18 * fps}
+            top="180px"
+            right="80px"
+          />
+
           <ZyphStage
             imageSrc={staticFile("zyph/zyph_12.png")}
             align="right"
+            zoomScale={1.22}
+            heightPercent={100}
             zoomDirection="subtle-in"
-            heightPercent={92}
             entranceFrame={185 * fps}
           />
         </>
@@ -436,8 +589,9 @@ export const PokerFaceLong: React.FC = () => {
           <ZyphStage
             imageSrc={staticFile("zyph/zyph_16.png")}
             align="right"
+            zoomScale={1.22}
+            heightPercent={100}
             zoomDirection="subtle-in"
-            heightPercent={92}
             entranceFrame={215 * fps}
           />
         </>
@@ -460,11 +614,24 @@ export const PokerFaceLong: React.FC = () => {
             top="36%"
             left="80px"
           />
+
+          <ScannerReticle
+            top="22%"
+            right="220px"
+            width={340}
+            height={380}
+            targetLabel="STABILITY CHECK"
+            probability="TENSION: 0.04"
+            statusText="SHOULDER DROPPED · RELAXED"
+            startFrame={240 * fps}
+          />
+
           <ZyphStage
             imageSrc={staticFile("zyph/zyph_17.png")}
             align="right"
+            zoomScale={1.22}
+            heightPercent={100}
             zoomDirection="subtle-in"
-            heightPercent={92}
             entranceFrame={238 * fps}
           />
         </>
@@ -483,11 +650,23 @@ export const PokerFaceLong: React.FC = () => {
             top="36%"
             left="80px"
           />
+
+          <FloatingCard
+            tag="EXERCISE"
+            title="THE SILENT PLAYBACK"
+            description="If your face looks hostile on mute, you have your answer."
+            startFrame={274 * fps}
+            durationInFrames={20 * fps}
+            top="180px"
+            right="80px"
+          />
+
           <ZyphStage
             imageSrc={staticFile("zyph/zyph_15.png")}
             align="right"
+            zoomScale={1.22}
+            heightPercent={100}
             zoomDirection="subtle-in"
-            heightPercent={92}
             entranceFrame={270 * fps}
           />
         </>
@@ -510,11 +689,22 @@ export const PokerFaceLong: React.FC = () => {
             top="36%"
             left="80px"
           />
+
+          <MetricMeter
+            label="BREVITY INDEX"
+            value={98}
+            startFrame={304 * fps}
+            top="180px"
+            left="80px"
+            color="#00C853"
+          />
+
           <ZyphStage
             imageSrc={staticFile("zyph/zyph_11.png")}
             align="right"
+            zoomScale={1.22}
+            heightPercent={100}
             zoomDirection="subtle-in"
-            heightPercent={92}
             entranceFrame={301 * fps}
           />
         </>
@@ -533,11 +723,23 @@ export const PokerFaceLong: React.FC = () => {
             top="36%"
             left="80px"
           />
+
+          <FloatingCard
+            tag="SCRIPT 01"
+            title="NEUTRALIZE THE TENSION"
+            description="De-escalates suspicion by making your silence purely cognitive."
+            startFrame={328 * fps}
+            durationInFrames={14 * fps}
+            top="180px"
+            right="80px"
+          />
+
           <ZyphStage
             imageSrc={staticFile("zyph/zyph_16.png")}
             align="right"
+            zoomScale={1.22}
+            heightPercent={100}
             zoomDirection="subtle-in"
-            heightPercent={92}
             entranceFrame={325 * fps}
           />
         </>
@@ -559,8 +761,9 @@ export const PokerFaceLong: React.FC = () => {
           <ZyphStage
             imageSrc={staticFile("zyph/zyph_6.png")}
             align="right"
+            zoomScale={1.22}
+            heightPercent={100}
             zoomDirection="subtle-in"
-            heightPercent={92}
             entranceFrame={345 * fps}
           />
         </>
@@ -588,8 +791,8 @@ export const PokerFaceLong: React.FC = () => {
               position: "absolute",
               right: "40px",
               bottom: "0px",
-              width: "720px",
-              height: "920px",
+              width: "740px",
+              height: "940px",
               zIndex: 20,
             }}
           >
@@ -599,51 +802,63 @@ export const PokerFaceLong: React.FC = () => {
       )}
 
       {/* ========================================================================= */}
-      {/* CHAPTER 08: THE CONCLUSION (410s -> 449s / 24600 -> end)                  */}
+      {/* CHAPTER 08: THE CONCLUSION (410s -> 449s / 24600 -> 26940 frames)         */}
       {/* ========================================================================= */}
 
-      {/* Scene 8.1: 410s - 430s (Keep it for high stakes moments) */}
-      {currentSec >= 410 && currentSec < 430 && (
+      {/* Scene 8.1: 410s - 435s (Control what you show, not just what you hide) */}
+      {currentSec >= 410 && currentSec < 435 && (
         <>
           <EditorialText
             spans={[
-              { text: "Keep it for" },
-              { text: "high-stakes moments.", italic: true, green: true },
+              { text: "Control what you show," },
+              { text: "not just what you hide.", italic: true, green: true },
             ]}
-            fontSize={74}
+            fontSize={68}
             startFrame={410 * fps}
             top="36%"
             left="80px"
           />
+
+          <MetricMeter
+            label="TACTICAL EQUILIBRIUM"
+            value={100}
+            startFrame={412 * fps}
+            top="180px"
+            left="80px"
+            color="#00C853"
+          />
+
           <ZyphStage
             imageSrc={staticFile("zyph/zyph_5.png")}
             align="right"
+            zoomScale={1.22}
+            heightPercent={100}
             zoomDirection="subtle-in"
-            heightPercent={92}
             entranceFrame={410 * fps}
           />
         </>
       )}
 
-      {/* Scene 8.2: 430s - end (Drop it everywhere else) */}
-      {currentSec >= 430 && (
+      {/* Scene 8.2: 435s - 449s (Final Signature Close) */}
+      {currentSec >= 435 && (
         <>
           <EditorialText
             spans={[
-              { text: "Drop it" },
-              { text: "everywhere else.", italic: true, green: true },
+              { text: "The real poker face" },
+              { text: "is choosing your moments.", italic: true, green: true },
             ]}
-            fontSize={78}
-            startFrame={430 * fps}
+            fontSize={72}
+            startFrame={435 * fps}
             top="36%"
             left="80px"
           />
           <ZyphStage
-            imageSrc={staticFile("zyph/zyph_19.png")}
+            imageSrc={staticFile("zyph/zyph_11.png")}
             align="right"
+            zoomScale={1.25}
+            heightPercent={100}
             zoomDirection="subtle-in"
-            heightPercent={92}
-            entranceFrame={430 * fps}
+            entranceFrame={435 * fps}
           />
         </>
       )}

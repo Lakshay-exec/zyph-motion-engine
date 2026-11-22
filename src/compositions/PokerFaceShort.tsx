@@ -1,13 +1,32 @@
 import React from "react";
 import { Audio, interpolate, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
+import { CameraHUD } from "../components/CameraHUD";
+import { FloatingCard } from "../components/FloatingCard";
 import { GlitchSlice } from "../components/GlitchSlice";
+import { MetricMeter } from "../components/MetricMeter";
+import { ScannerReticle } from "../components/ScannerReticle";
+import { SoundEffects } from "../components/SoundEffects";
 import { ZyphStage } from "../components/ZyphStage";
 import { COLORS, FONTS } from "../constants";
+import { SoundCue } from "../types";
 
 export const PokerFaceShort: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig(); // 60 FPS
   const currentSec = frame / fps;
+
+  const sfxCues: SoundCue[] = [
+    { frame: 0, src: "sfx/thump.wav", volume: 0.8 },
+    { frame: 15, src: "sfx/whoosh.wav", volume: 0.6 },
+    { frame: 6 * fps, src: "sfx/shutter.wav", volume: 0.7 },
+    { frame: 6 * fps + 10, src: "sfx/whoosh.wav", volume: 0.5 },
+    { frame: 14 * fps, src: "sfx/thump.wav", volume: 0.9 },
+    { frame: 14 * fps + 8, src: "sfx/glitch.wav", volume: 0.7 },
+    { frame: 17 * fps, src: "sfx/ping.wav", volume: 0.6 },
+    { frame: 21 * fps, src: "sfx/pop.wav", volume: 0.8 },
+    { frame: 21 * fps + 12, src: "sfx/whoosh.wav", volume: 0.6 },
+    { frame: 28 * fps, src: "sfx/ping.wav", volume: 0.5 },
+  ];
 
   return (
     <div
@@ -19,14 +38,18 @@ export const PokerFaceShort: React.FC = () => {
         overflow: "hidden",
       }}
     >
-      {/* 1. Voiceover Audio */}
+      {/* 1. Voiceover Audio & Rich Sound FX */}
       <Audio src={staticFile("audio/voiceover.mp3")} startFrom={0} />
+      <SoundEffects cues={sfxCues} />
 
-      {/* 2. Top Editorial Header */}
+      {/* 2. Technical Camera HUD Overlay (Crosshairs, Grid, REC, Timecode) */}
+      <CameraHUD label="VERTICAL METRICS: ACTIVE" showRec />
+
+      {/* 3. Top Editorial Header */}
       <div
         style={{
           position: "absolute",
-          top: "80px",
+          top: "88px",
           left: 0,
           right: 0,
           display: "flex",
@@ -71,7 +94,7 @@ export const PokerFaceShort: React.FC = () => {
         </span>
       </div>
 
-      {/* 3. Dynamic Vertical Scenes */}
+      {/* 4. Dynamic Kinetic Scenes */}
 
       {/* Scene 1: 0 - 6s ("I spent years building the perfect poker face.") */}
       {currentSec < 6 && (
@@ -104,20 +127,33 @@ export const PokerFaceShort: React.FC = () => {
             </h1>
           </div>
 
+          <FloatingCard
+            tag="ASSUMPTION"
+            title="THE BLANK SLATE"
+            description="We believe a flat face shows total emotional control."
+            startFrame={40}
+            durationInFrames={5 * fps}
+            top="540px"
+            left="64px"
+          />
+
+          {/* Hero Scaled Zyph Stage */}
           <div
             style={{
               position: "absolute",
               bottom: "0px",
               left: 0,
               right: 0,
-              height: "1280px",
+              height: "1500px",
             }}
           >
             <ZyphStage
               imageSrc={staticFile("zyph/zyph_11.png")}
               align="center"
+              zoomScale={1.35}
+              heightPercent={100}
+              shadowWidth={720}
               zoomDirection="subtle-in"
-              heightPercent={96}
             />
           </div>
         </>
@@ -154,27 +190,41 @@ export const PokerFaceShort: React.FC = () => {
             </h1>
           </div>
 
+          {/* Live Facial Scanner HUD over Zyph */}
+          <ScannerReticle
+            top="460px"
+            left="360px"
+            width={360}
+            height={380}
+            targetLabel="NEUTRALITY SCAN"
+            probability="OBSERVER GAP: 88%"
+            statusText="DETECTED: SENSORY DEFENSE"
+            startFrame={6 * fps}
+          />
+
           <div
             style={{
               position: "absolute",
               bottom: "0px",
               left: 0,
               right: 0,
-              height: "1280px",
+              height: "1500px",
             }}
           >
             <ZyphStage
               imageSrc={staticFile("zyph/zyph_18.png")}
               align="center"
+              zoomScale={1.35}
+              heightPercent={100}
+              shadowWidth={720}
               zoomDirection="subtle-in"
-              heightPercent={96}
               entranceFrame={6 * fps}
             />
           </div>
         </>
       )}
 
-      {/* Scene 3: 14s - 21s ("Bored." - Iconic display punch) */}
+      {/* Scene 3: 14s - 21s ("Bored." - Display punch) */}
       {currentSec >= 14 && currentSec < 21 && (
         <>
           <div
@@ -201,20 +251,31 @@ export const PokerFaceShort: React.FC = () => {
             </h1>
           </div>
 
+          <MetricMeter
+            label="PERCEPTION GAP"
+            value={94}
+            startFrame={15 * fps}
+            top="480px"
+            left="64px"
+            color="#E53935"
+          />
+
           <div
             style={{
               position: "absolute",
               bottom: "0px",
               left: 0,
               right: 0,
-              height: "1350px",
+              height: "1520px",
             }}
           >
             <ZyphStage
               imageSrc={staticFile("zyph/zyph_2.png")}
               align="center"
+              zoomScale={1.38}
+              heightPercent={100}
+              shadowWidth={740}
               zoomDirection="subtle-in"
-              heightPercent={96}
               entranceFrame={14 * fps}
             />
           </div>
@@ -257,7 +318,7 @@ export const PokerFaceShort: React.FC = () => {
                     position: "absolute",
                     left: 0,
                     top: "55%",
-                    height: "5px",
+                    height: "6px",
                     width: "100%",
                     backgroundColor: COLORS.accentGreen,
                     borderRadius: "3px",
@@ -267,20 +328,32 @@ export const PokerFaceShort: React.FC = () => {
             </h1>
           </div>
 
+          <FloatingCard
+            tag="FRAMEWORK"
+            title="SELECTIVE EXPRESSION"
+            description="Control what they perceive, not what you suppress."
+            startFrame={22 * fps}
+            durationInFrames={12 * fps}
+            top="480px"
+            left="64px"
+          />
+
           <div
             style={{
               position: "absolute",
               bottom: "0px",
               left: 0,
               right: 0,
-              height: "1320px",
+              height: "1520px",
             }}
           >
             <ZyphStage
               imageSrc={staticFile("zyph/zyph_13.png")}
               align="center"
+              zoomScale={1.35}
+              heightPercent={100}
+              shadowWidth={720}
               zoomDirection="subtle-in"
-              heightPercent={96}
               entranceFrame={21 * fps}
             />
           </div>

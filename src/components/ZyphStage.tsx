@@ -17,11 +17,11 @@ interface ZyphStageProps {
 export const ZyphStage: React.FC<ZyphStageProps> = ({
   imageSrc,
   align = "right",
-  zoomScale = 1.0,
+  zoomScale = 1.20, // Scaled up significantly for heroic presence
   zoomDirection = "subtle-in",
-  shadowWidth = 520,
-  shadowOpacity = 0.35,
-  heightPercent = 94,
+  shadowWidth = 620,
+  shadowOpacity = 0.38,
+  heightPercent = 100, // Fills full vertical canvas
   entranceFrame = 0,
   horizontalOffset = 0,
 }) => {
@@ -67,9 +67,9 @@ export const ZyphStage: React.FC<ZyphStageProps> = ({
 
   const paddingSide =
     align === "left"
-      ? { paddingLeft: "80px" }
+      ? { paddingLeft: "40px" }
       : align === "right"
-      ? { paddingRight: "80px" }
+      ? { paddingRight: "40px" }
       : {};
 
   return (
@@ -90,7 +90,7 @@ export const ZyphStage: React.FC<ZyphStageProps> = ({
         style={{
           position: "relative",
           height: `${heightPercent}%`,
-          maxWidth: "58%",
+          maxWidth: "70%", // Expanded so arms and posture breathe
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -105,10 +105,10 @@ export const ZyphStage: React.FC<ZyphStageProps> = ({
             position: "absolute",
             bottom: "0%",
             width: `${shadowWidth}px`,
-            height: "44px",
+            height: "48px",
             borderRadius: "50%",
             background: `radial-gradient(ellipse at center, rgba(0,0,0,${shadowOpacity}) 0%, rgba(0,0,0,${shadowOpacity * 0.4}) 45%, rgba(0,0,0,0) 72%)`,
-            filter: "blur(8px)",
+            filter: "blur(9px)",
             transform: `scale(${cameraScale}, 0.55)`,
             pointerEvents: "none",
             zIndex: 1,
